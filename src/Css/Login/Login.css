@@ -1,0 +1,131 @@
+.color {
+  background-color: rgb(229, 229, 229);
+  height: 100vh;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.color h4 {
+  font-family: roboto;
+  font-size: 27px;
+  color: rgb(31, 19, 91);
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+
+  width: 410px;
+  height: 470px;
+  /* left: 478px;
+         right: 478px; */
+  /* top: 177px;
+       bottom: 123px; */
+}
+.stud {
+  color: rgb(95, 39, 205);
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 13%;
+  margin-left: 15px;
+  margin-right: 58px;
+}
+
+.emp {
+  color: rgb(107, 107, 107);
+  font-family: Roboto;
+  font-size: 23px;
+  font-weight: 400;
+  margin-top: 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.login {
+  border-radius: 0.1px;
+  text-align: center;
+  width: 60%;
+  padding: 4%;
+  margin-left: 55px;
+  margin-top: 25px;
+  background-color: white;
+  font-size: 20px;
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.log {
+  margin-left: -1px;
+  width: 308px;
+  margin-top: 20px;
+  background-color: rgb(10, 103, 79);
+  color: white;
+  padding: 2%;
+}
+.account {
+  text-align: center;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 500;
+  margin-right: auto;
+  color: black;
+  margin-left: auto;
+}
+.fgtpswd {
+  color: rgb(95, 39, 205);
+  margin-left: 196px;
+  font-size: small;
+}
+a {
+  color: rgb(95, 39, 205);
+}
+.text {
+  font-size: 24px;
+  color: rgb(31, 19, 91);
+  padding: 8px;
+  font-family: Roboto;
+  margin-left: -22px;
+}
+
+.or {
+  display: flex;
+  margin-left: 90px;
+  margin-top: 20px;
+  margin-bottom: -8px;
+  font-weight: 400px;
+  font-size: 20px;
+}
+
+.left {
+  width: 42px;
+  margin-top: 3px;
+}
+
+.right {
+  width: 42px;
+  margin-top: 3px;
+}
+
+input {
+  width: 300px;
+  height: 30px;
+}
+
+.lab {
+  margin-bottom: -9px;
+  margin-top: -13px;
+}

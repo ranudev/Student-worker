@@ -1,0 +1,41 @@
+* {
+  font-family: Roboto;
+  color: #1f135b;
+
+  font-size: 18px;
+
+  line-height: 21.09px;
+  text-align: left;
+}
+h1 {
+  font-size: 2em;
+}
+
+.active {
+  color: red;
+}
+
+.nav {
+  margin: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+}
+.list ul li {
+  display: inline;
+  margin-right: 18px;
+  cursor: pointer;
+}
+.loginbtn {
+  font-family: Roboto;
+  border-radius: 5px;
+  padding: 21px;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  padding: 2%;
+  border-color: #1f135b;
+  color: #1f135b;
+  cursor: pointer;
+}

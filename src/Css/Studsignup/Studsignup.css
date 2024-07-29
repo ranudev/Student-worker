@@ -1,0 +1,81 @@
+.inner-box {
+  height: 70vh;
+  width: 30vw;
+  border: 2px black solid;
+  background-color: white;
+  margin: auto;
+}
+.outer {
+  background-color: grey;
+}
+
+.outer h6 {
+  text-align: center;
+}
+
+.outer p {
+  text-align: center;
+  margin: auto;
+}
+.google {
+  height: 40px;
+  border: 0.5px solid blueviolet;
+  width: 250px;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 3px;
+  padding: auto;
+  padding-top: 10px;
+  text-align: center;
+  color: black;
+  font-weight: 500;
+  margin-right: 22%;
+}
+.google span {
+  margin-right: 10px;
+}
+
+.google-inner {
+  padding: 1px 24px;
+}
+.or {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 100px;
+}
+.orleft {
+  height: 0px;
+  width: 50px;
+  border: 0.1px solid blueviolet;
+}
+
+.orright {
+  height: 0px;
+  width: 50px;
+  border: 0.1px solid blueviolet;
+}
+
+.frm {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 80px;
+}
+
+label {
+  margin-top: 10px;
+}
+input {
+  width: 90%;
+}
+
+::placeholder {
+  color: black;
+}
+
+button {
+  margin: 20px 20px;
+}

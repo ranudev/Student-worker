@@ -1,0 +1,141 @@
+* {
+  font-family: Roboto;
+  color: rgb(31, 19, 91);
+}
+
+.Upperbox {
+  height: 159px;
+  width: 521px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid rgba(159, 125, 225, 0.5);
+  border-radius: 3px;
+}
+
+.upper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+.Upperbox p {
+  text-align: center;
+}
+button {
+  width: 258px;
+  height: 40px;
+  border-radius: 3px;
+
+  /* Green */
+  background: rgb(10, 103, 79);
+  margin-top: 20px;
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+}
+.resume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.resume h4 {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 29px;
+}
+.intro {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0px;
+  margin-top: 80px;
+}
+.intro h5 {
+  color: rgba(0, 0, 0, 0.8);
+  font-family: Roboto;
+  font-size: 19px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.intro p {
+  color: rgb(0, 0, 0);
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.intro span {
+  color: rgb(0, 0, 0);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.box {
+  height: 496px;
+  width: 860px;
+  box-sizing: border-box;
+  /* border: 0.5px solid rgba(0, 0, 0, 0.4); */
+  border: 0.5px solid rgba(0, 0, 0, 0.5);
+  padding: 26px;
+  margin-left: 406px;
+}
+.skills h5 {
+  color: rgba(0, 0, 0, 0.8);
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.skills {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 70px;
+  margin-top: 80px;
+}
+.skills p {
+  margin-left: 26px;
+  color: rgb(0, 0, 0);
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+strong {
+  color: rgb(0, 0, 0);
+}
+.name h2 span img {
+  height: 20px;
+  width: 20px;
+  margin-left: 20px;
+}
+.pencil img {
+  margin-left: 0px;
+  height: 25px;
+}
+.complete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  border-radius: 3px;
+
+  padding: 90px;
+}
+.complete button {
+  background-color: rgb(10, 103, 79);
+  font-size: 25px;
+  border-color: rgb(10, 103, 79);
+  cursor: pointer;
+}

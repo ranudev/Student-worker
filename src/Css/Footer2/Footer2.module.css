@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+  color: rgb(31, 19, 91);
+  font-family: Roboto;
+  font-size: 22px;
+}
+
+div p {
+  color: #1f135b;
+  margin-right: 64px;
+}

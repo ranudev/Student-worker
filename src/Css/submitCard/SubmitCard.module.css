@@ -1,0 +1,45 @@
+.mainbx {
+  height: 218px;
+  width: 394px;
+}
+.upperbx {
+  height: 48px;
+  width: 394;
+
+  background-color: rgba(232, 251, 246, 1);
+}
+.mainbx p {
+  text-align: center;
+  color: rgba(31, 19, 91, 1);
+  margin-left: 65px;
+  margin-right: 79px;
+  margin-top: 49px;
+  font-weight: 500;
+}
+.morejobs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+  border-color: 0.5px rgba(10, 103, 79, 1);
+}
+.jobbtn {
+  background-color: white;
+  color: rgba(10, 103, 79, 1);
+  margin-left: 50px;
+}
+.circle {
+  background-color: rgba(10, 103, 79, 1);
+  border-radius: 120%;
+  height: 45px;
+  width: 52px;
+  margin: -28px 155px;
+  color: white;
+}
+
+.checkicon {
+  color: white;
+  font-size: 40px;
+  margin: 2px 8px;
+}

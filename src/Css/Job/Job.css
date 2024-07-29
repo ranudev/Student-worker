@@ -1,0 +1,98 @@
+.job {
+  background-color: rgb(229, 229, 229);
+  margin-top: 20px;
+  padding: 30px;
+  margin-bottom: -160px;
+}
+.title {
+  margin-left: 33%;
+  font-size: 18px;
+  color: rgb(31, 19, 91);
+  margin-top: 22px;
+}
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.srchicon {
+  background-color: rgb(10, 103, 79);
+  height: 41px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 200;
+}
+.Filterbox {
+  background-color: rgb(255, 255, 255);
+  height: 242px;
+  width: 400px;
+  margin-left: 15%;
+}
+.Filterbox p {
+  margin-right: 0px;
+  font-size: 24px;
+  padding: 12px;
+  color: #1f135b;
+
+  margin-left: 35px;
+  padding-top: 28px;
+  padding-bottom: 10px;
+}
+
+.filter {
+  margin-left: 15%;
+}
+.location {
+  padding: 8%;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.apply {
+  border-radius: 3px;
+
+  /* green */
+  background: rgb(10, 103, 79);
+  width: 270px;
+  height: 32px;
+  left: 234px;
+  color: white;
+  text-align: center;
+  margin-left: 18%;
+  margin-top: 5%;
+}
+.labe {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  align-items: center;
+  margin-top: 30px;
+  margin-right: 40px;
+}
+
+.site {
+  gap: 10px;
+  font-size: 21px;
+  color: rgba(0, 0, 0, 0.9);
+}
+.parent {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 69px;
+  margin-left: 202px;
+}
+
+.num {
+  margin-top: -260px;
+}
+.nums {
+  color: rgb(31, 19, 91);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -7px;
+  margin-left: 60px;
+}

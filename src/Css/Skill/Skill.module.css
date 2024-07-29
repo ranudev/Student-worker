@@ -1,0 +1,17 @@
+.box {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 600px;
+
+  margin: auto;
+}
+h1 {
+  text-align: center;
+}
+
+.para {
+  text-align: center;
+  margin: auto;
+  color: rgb(31, 19, 91);
+}

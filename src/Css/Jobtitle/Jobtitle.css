@@ -1,0 +1,38 @@
+.jobtitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 186px;
+  width: 610px;
+  background-color: rgb(255, 255, 255);
+  margin-left: 726px;
+  margin-right: 219px;
+
+  margin-top: 6px;
+}
+h5 {
+  margin-right: 516px;
+  padding: 10px;
+  color: rgb(10, 103, 79);
+}
+
+div p {
+  margin-right: 516px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.foot {
+  margin-top: 25px;
+  color: rgba(0, 0, 0, 0.8);
+  margin-right: 45%;
+}
+/* .link {
+} */
+
+/* .line {
+} */
+
+.details {
+  margin-left: 380px;
+  margin-top: -30px;
+}
