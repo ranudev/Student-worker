@@ -1,0 +1,135 @@
+* {
+  font-family: Roboto;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 21px;
+  color: white;
+  text-align: center;
+  font-family: Roboto;
+}
+.earn {
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 47px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.student {
+  cursor: pointer;
+  width: 156px;
+  height: 55px;
+  background-color: rgb(10, 103, 79);
+  color: white;
+  border-radius: 3px;
+  border-color: none;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  text-align: center;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-top: 25px;
+}
+.srchicon {
+  background-color: rgb(10, 103, 79);
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  font-size: 30px;
+}
+.inp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  text-align: left;
+
+  border-color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+  font-size: 23px;
+}
+.inp input {
+  height: 60px;
+  width: 600px;
+}
+.input::placeholder {
+  color: rgba(127, 122, 122, 0.4);
+}
+.categtxt {
+  margin-left: 153px;
+  margin-top: 100px;
+
+  font-size: 2em;
+  color: rgb(31, 19, 91);
+}
+.signup {
+  margin-top: 130px;
+  margin-bottom: 40px;
+  margin-left: 45%;
+
+  padding: 10px;
+  font-size: 20px;
+  /*  */
+  cursor: pointer;
+  width: 160px;
+  height: 54px;
+  background-color: rgb(10, 103, 79);
+  color: white;
+  border-radius: 3px;
+  border: none;
+  text-align: center;
+
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.studentwrkr {
+  font-size: 1.9em;
+  margin-top: 90px;
+  text-align: center;
+
+  color: rgb(31, 19, 91);
+}
+.card2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  margin-top: 40px;
+}
+.next {
+  text-align: center;
+  margin-top: 66px;
+  font-size: 27px;
+  font-weight: 400;
+  color: rgb(31, 19, 91);
+}
+
+.keywrd {
+  font-size: 18px;
+  color: rgb(31, 19, 91);
+  margin-top: 22px;
+  text-align: center;
+  margin-right: 30.5%;
+  font-weight: 450;
+}

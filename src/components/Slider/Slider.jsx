@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Css/Slider/Slider.css";
+import styles from "../../Css/Slider/Slider.module.css";
 import { useNavigate } from "react-router-dom";
 function Slider(prop) {
   const navigate = useNavigate();
@@ -9,41 +9,24 @@ function Slider(prop) {
   return (
     <React.Fragment>
       <div style={{ position: "relative" }}>
-        <img
-          src={prop.img}
-          alt="pcimage"
-          style={{ height: "497px", width: "100%" }}
-        />
+        <img src={prop.img} alt="pcimage" className={styles.pcimg} />
 
-        <div
-          style={{
-            position: "absolute",
-            top: "142px ",
-            left: "488px",
-            right: "489px",
-            display: "flex",
-            justifyContent: " center",
-            alignItems: " center",
-            flexDirection: "column",
-          }}
-        >
-          <h4 className="earn">{prop.text1}</h4>
+        <div className={styles.sliderbox}>
+          <h4 className={styles.earn}>{prop.text1}</h4>
 
-          <p className="text">
+          <p className={styles.text}>
             {prop.text2}
             <br></br>
             {prop.text3}
           </p>
-          <div>
+          <div className={styles.btn}>
             <button
-              className="student
-          "
+              className={styles.student}
               onClick={() => {
                 goto();
               }}
             >
-              Student signup
-              {/* <NavLink to="/studentsignup">Student Signup</NavLink> */}
+              Student Signup
             </button>
           </div>
         </div>

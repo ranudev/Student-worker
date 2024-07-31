@@ -14,7 +14,7 @@ import abeg from "../../assets/abeg.png";
 import Alat from "../../assets/Alat.png";
 import Barter from "../../assets/Barter.png";
 import Rightarw from "../../assets/Rightarw.png";
-import "../../Css/Employer/Employer.css";
+import style from "../../Css/Employer/Employer.module.css";
 //import Footer from "../../components/Footer/Footer";
 //import Header from "../../components/Header/Header";
 
@@ -29,122 +29,35 @@ function Employer() {
         text2="Hire job ready students and spend less on your workforce"
       />
 
-      <p
-        style={{
-          textAlign: "center",
-          marginTop: "90px",
-          marginBottom: "99px",
-          fontWeight: "400",
-          margin: "auto",
-          fontSize: "27px",
-          color: "rgb(31, 19, 91)",
+      <p className={style.Hire}>10,000+ Students Ready For Hire</p>
 
-          lineHeight: " 31.64px",
-        }}
-      >
-        10,000+ Students Ready For Hire
-      </p>
-
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-evenly",
-          alignItems: "center",
-          marginTop: "50px",
-        }}
-      >
+      <div className={style.Card2}>
         <Card2 img={Expnd} text="Expand your workforce" />
         <Card2 img={Imprv} text="Improve performance" />
         <Card2 img={Save} text="Save capital" />
       </div>
 
-      <p
-        style={{
-          marginTop: "150px",
-          marginBottom: "80px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
+      <p className={style.steps}>Hire Students in 3 Steps</p>
 
-          fontWeight: "700",
-          margin: "auto",
-          color: "rgb(31, 19, 91)",
-          fontSize: "35px",
-          textShadow: " 2px 2px rgb(31, 19, 91)",
-        }}
-      >
-        Hire Students in 3 Steps
-      </p>
-
-      <div
-        style={{
-          borderRadius: "5px",
-          //display: "flex",
-          //flexDirection: "column",
-          //alignItems: "flex-end",
-          // justifyContent: "center",
-          marginLeft: "20%",
-        }}
-      >
+      <div className={style.Rgister}>
         <img src={Register} alt="" />
         <h4>Register</h4>
-        <p style={{ color: "rgb(31, 19, 91)" }}>Sign up on StudentWorker</p>
+        <p>Sign up on StudentWorker</p>
       </div>
-      <div
-        style={{
-          borderRadius: "5px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-end",
-          justifyContent: "center",
-          marginRight: "17%",
-          textAlign: "left",
-        }}
-      >
+      <div className={style.job}>
         <img src={Job} alt="" />
-        <h4 style={{ alignSelf: "end", marginRight: "12%" }}>Post Jobs</h4>
-        <p style={{ marginRight: "-1%", color: "rgb(31, 19, 91)" }}>
-          Easily post your jobs to students
-        </p>
+        <h4>Post Jobs</h4>
+        <p>Easily post your jobs to students</p>
       </div>
-      <div
-        style={{
-          marginTop: "40px",
-          borderRadius: "5px",
-          //display: "flex",
-          // flexDirection: "column",
-          //   //alignItems: "flex-end",
-          //   justifyContent: "center",
-          marginLeft: "20%",
-        }}
-      >
+      <div className={style.hire}>
         <img src={Hire} alt="" />
         <h4>Hire</h4>
-        <p style={{ color: "rgb(31, 19, 91)" }}>Screen and employ the best</p>
+        <p>Screen and employ the best</p>
       </div>
 
-      <p
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          marginBottom: "56px",
-          marginTop: "156px",
-          fontSize: "27px",
-          fontWeight: "400",
-        }}
-      >
-        Top Employers Choose StudentWorker
-      </p>
+      <p className={style.top}>Top Employers Choose StudentWorker</p>
 
-      <div
-        style={{
-          display: "flex",
-          gap: "60px",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <div className={style.arrow}>
         <img src={Leftarw} alt="" />
         <img src={Group} alt="" />
         <img src={abeg} alt="" />
@@ -153,7 +66,7 @@ function Employer() {
         <img src={Rightarw} alt="" />
       </div>
 
-      <button className="empsignup"> Employer signup</button>
+      <button className={style.empsignup}> Employer signup</button>
 
       {/* <Footer /> */}
     </React.Fragment>

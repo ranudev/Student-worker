@@ -1,35 +1,56 @@
-import "../../Css/Header/Header.css";
+import style from "../../Css/Header/Header.module.css";
 import { NavLink, Outlet } from "react-router-dom";
 
 export default function UnAuthenticatedHeader() {
   return (
     <div>
-      <nav className="nav">
+      <nav className={style.nav}>
         <div>
           <a>
             <h1>Student worker</h1>
           </a>
         </div>
 
-        <div className="list">
+        <div className={style.list}>
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink
+                to="/"
+                style={{
+                  textDecoration: "none",
+                }}
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/job">Job</NavLink>
+              <NavLink
+                to="/job"
+                style={{
+                  textDecoration: "none",
+                }}
+              >
+                Job
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/employer">Employer</NavLink>
+              <NavLink
+                to="/employer"
+                style={{
+                  textDecoration: "none",
+                }}
+              >
+                Employer
+              </NavLink>
             </li>
           </ul>
         </div>
-        <div className="list">
+        <div className={style.list}>
           <ul>
             <li>About Us </li>
             <li>Contact Us</li>
             <NavLink to="/login">
-              <button className="loginbtn">Login</button>
+              <button className={style.loginbtn}>Login</button>
             </NavLink>
           </ul>
         </div>

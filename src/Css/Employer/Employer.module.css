@@ -1,0 +1,103 @@
+.empsignup {
+  background-color: rgb(10, 103, 79);
+  border-radius: 10px;
+
+  cursor: pointer;
+  margin-top: 130px;
+  margin-bottom: 120px;
+  margin-left: 45%;
+  color: white;
+  height: 40%;
+  width: 12%;
+  text-align: center;
+  padding: 15px;
+  border: none;
+}
+.Hire {
+  text-align: center;
+  /* margin-top: 120px;
+  margin-bottom: px; */
+  font-weight: 400;
+  margin: 65px;
+  font-size: 27px;
+  color: rgb(31, 19, 91);
+
+  line-height: 31.64px;
+}
+.Card2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 50px;
+}
+.steps {
+  margin-top: 150px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 700;
+
+  color: rgb(31, 19, 91);
+  font-size: 35px;
+  text-shadow: 2px 2px rgb(31, 19, 91);
+}
+.Rgister {
+  border-radius: 5px;
+
+  margin-left: 20%;
+}
+
+.Rgister p {
+  font-size: 20px;
+  color: rgb(31, 19, 91);
+}
+.job {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-right: 17%;
+  text-align: left;
+}
+.job p {
+  margin-right: -2.4%;
+  font-size: 20px;
+  color: rgb(31, 19, 91);
+}
+.job h4 {
+  align-self: end;
+  margin-right: 12%;
+}
+h4 {
+  font-size: 23px;
+}
+.hire {
+  margin-top: 40px;
+  border-radius: 5px;
+
+  margin-left: 20%;
+}
+.hire p {
+  font-size: 20px;
+  color: rgb(31, 19, 91);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 56px;
+  margin-top: 156px;
+  font-size: 27px;
+  font-weight: 400;
+  color: rgba(31, 19, 91, 1);
+}
+.arrow {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+}

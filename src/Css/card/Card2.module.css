@@ -1,0 +1,20 @@
+.imgbx {
+  height: 160px;
+  width: 190px;
+  display: flex;
+  align-items: center;
+
+  border-radius: 10px;
+  flex-direction: column;
+}
+.txt {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  margin-right: 10px;
+  margin-top: 20px;
+  align-content: center;
+  text-align: center;
+
+  color: rgb(31, 19, 91);
+}

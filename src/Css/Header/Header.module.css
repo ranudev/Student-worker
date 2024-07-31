@@ -10,11 +10,9 @@
 h1 {
   font-size: 2em;
 }
-
 .active {
-  color: red;
+  color: #1f135b;
 }
-
 .nav {
   margin: 14px;
   display: flex;
@@ -27,15 +25,20 @@ h1 {
   margin-right: 18px;
   cursor: pointer;
 }
+.list ul li NavLink {
+  text-decoration: none;
+}
 .loginbtn {
   font-family: Roboto;
   border-radius: 5px;
   padding: 21px;
   width: 100px;
   height: 40px;
+  background-color: white;
   text-align: center;
   padding: 2%;
-  border-color: #1f135b;
   color: #1f135b;
+  border-color: rgba(31, 19, 91, 0.5);
+  border: 1px solid;
   cursor: pointer;
 }

@@ -1,17 +1,35 @@
+* {
+  font-family: Roboto;
+}
 .earn {
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 40px;
   line-height: 47px;
+  word-spacing: 10px;
 }
 
+.pcimg {
+  height: 497px;
+  width: 100%;
+}
+.sliderbox {
+  position: absolute;
+  top: 142px;
+  left: 488px;
+  right: 489px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .text {
   color: #ffffff;
 
   text-align: center;
   font-size: 20px;
-  font-weight: 300;
-  line-height: 21px;
+  font-weight: 370;
+  line-height: 21.09px;
   margin: auto;
 }
 .nowrap {
@@ -25,11 +43,10 @@
   background-color: rgb(10, 103, 79);
   color: white;
   border-radius: 3px;
-  border-color: none;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: none;
   text-align: center;
 
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 21px;
   margin-top: 25px;

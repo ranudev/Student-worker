@@ -1,21 +1,29 @@
-.inner-box {
-  height: 70vh;
+.innerbox {
+  height: 75vh;
   width: 30vw;
-  border: 2px black solid;
+  border-color: none;
   background-color: white;
-  margin: auto;
+  margin: 60px auto;
+  padding: 10px;
 }
 .outer {
-  background-color: grey;
+  background-color: rgb(229, 229, 229);
+  height: 100vh;
 }
 
-.outer h6 {
+h6 {
   text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+  margin-right: 20px;
+  font-size: 25px;
 }
-
-.outer p {
+p {
   text-align: center;
   margin: auto;
+  font-size: 20px;
+  margin-left: 43px;
+  /* margin-bottom: -50px; */
 }
 .google {
   height: 40px;
@@ -35,7 +43,7 @@
   margin-right: 10px;
 }
 
-.google-inner {
+.googleinner {
   padding: 1px 24px;
 }
 .or {
@@ -43,7 +51,6 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  margin-right: 100px;
 }
 .orleft {
   height: 0px;
@@ -77,5 +84,24 @@ input {
 }
 
 button {
-  margin: 20px 20px;
+  margin: 20px 2px;
+}
+.term {
+  margin-top: 10px;
+  margin-right: 40px;
+  font-size: 15px;
+}
+.Mac {
+  width: 80%;
+  height: 10%;
+}
+
+.sgnup {
+  width: 20pc;
+}
+.Char {
+  color: grey;
+}
+.account {
+  font-size: 20px;
 }
