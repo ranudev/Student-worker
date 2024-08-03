@@ -12,7 +12,9 @@ h1 {
 }
 .active {
   color: #1f135b;
+  font-weight: bold;
 }
+
 .nav {
   margin: 14px;
   display: flex;

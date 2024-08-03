@@ -15,3 +15,24 @@ h1 {
   margin: auto;
   color: rgb(31, 19, 91);
 }
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.prevbtn {
+  padding: 10px;
+  width: 180px;
+  font-size: 1.8em;
+  text-align: center;
+  border-radius: 3px;
+}
+.nxtbtn {
+  padding: 10px;
+  width: 180px;
+  background-color: rgb(10, 103, 79);
+  color: white;
+  font-size: 1.8em;
+  text-align: center;
+  border-radius: 3px;
+}

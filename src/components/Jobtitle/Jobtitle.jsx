@@ -1,24 +1,23 @@
-//import React from 'react'
-
 import React from "react";
 import location from "../../assets/Map.png";
 import Globe from "../../assets/Globe.png";
 import Money from "../../assets/Money.png";
 import Time from "../../assets/Time.png";
 import style from "../../Css/Jobtitle/Jobtitle.module.css";
-import { NavLink } from "react-router-dom";
+//import { NavLink } from "react-router-dom";
 function Jobtitle() {
   return (
     <React.Fragment>
-      <div className={style.jobtitle}>
-        <h5>Job Title</h5>
-        <p>company</p>
-        <div>
+      <p className={style.num}>12,000 Jobs</p>
+      <div className={style.mainbox}>
+        <div className={style.title}>
+          <h3>Job Title</h3>
+          <p>Company</p>
+        </div>
+        <div className={style.icon}>
           <div>
             <img src={location} alt="" />
             <span>Location</span>
-            <hr className={style.line} />
-            <div></div>
           </div>
 
           <div>
@@ -31,16 +30,17 @@ function Jobtitle() {
           </div>
           <div>
             <img src={Time} alt="" />
-            <span>24HRS/week</span>
+            <span>24hrs/Week</span>
           </div>
         </div>
-
+        <hr />
         <div className={style.foot}>
-          <span>10days ago</span> <span>12 Applicants</span>
+          <div className={style.app}>
+            <p>10days ago</p>
+            <p>12Applicants</p>
+          </div>
+          <div className={style.det}>View Details</div>
         </div>
-        <span className={style.details}>
-          <NavLink to="/Jobtitleatcompany"> View Details</NavLink>
-        </span>
       </div>
     </React.Fragment>
   );

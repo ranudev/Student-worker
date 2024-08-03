@@ -1,22 +1,17 @@
 import React from "react";
-import "../../Css/Cardres/Cardres.css";
+import style from "../../Css/Cardres/Cardres.module.css";
 
 function Cardres(prop) {
   return (
     <React.Fragment>
-      <div className="box">
-        <div className="upperprt">
+      <div className={style.box}>
+        <div className={style.upperprt}>
           <h3> {prop.text1}</h3>
           <p>{prop.text2}</p>
         </div>
 
-        <hr
-          style={{
-            width: "98%",
-            border: "0.3px solid rgba(0, 0, 0, 0.4)",
-          }}
-        />
-        <div className="lower">
+        <hr />
+        <div className={style.lower}>
           <p>{prop.text3}</p>
           <p>{prop.text4}</p>
 

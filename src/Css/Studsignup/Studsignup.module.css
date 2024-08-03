@@ -1,31 +1,151 @@
-.innerbox {
-  height: 75vh;
-  width: 30vw;
-  border-color: none;
-  background-color: white;
-  margin: 60px auto;
-  padding: 10px;
-}
-.outer {
+.color {
   background-color: rgb(229, 229, 229);
-  height: 100vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header {
+  margin-left: 60px;
+}
+.color h4 {
+  font-family: Roboto;
+  font-size: 27px;
+  color: rgb(31, 19, 91);
+}
+.header h4 {
+  font-size: 40px;
 }
 
-h6 {
-  text-align: center;
-  padding: 10px;
-  margin-top: 30px;
-  margin-right: 20px;
-  font-size: 25px;
+.header p {
+  font-size: 30px;
 }
-p {
-  text-align: center;
+.body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+
+  width: 410px;
+  height: 470px;
+}
+.stud {
+  color: rgb(95, 39, 205);
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.emp {
+  color: rgb(107, 107, 107);
+  font-family: Roboto;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin: auto;
-  font-size: 20px;
-  margin-left: 43px;
-  /* margin-bottom: -50px; */
+  border: 1px solid black;
+  padding: 40px;
 }
-.google {
+.login {
+  border-radius: 0.1px;
+  text-align: center;
+  width: 55%;
+  padding: 4%;
+  margin-left: 50px;
+  margin-top: 25px;
+  background-color: white;
+  font-size: 20px;
+}
+.lavel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-top: 20px;
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.log {
+  margin-left: -1px;
+  width: 308px;
+  margin-top: 20px;
+  background-color: rgb(10, 103, 79);
+  color: white;
+  padding: 5%;
+  border: none;
+  font-size: 20px;
+}
+.account {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 18px;
+  font-weight: 500;
+
+  color: black;
+}
+.fgtpswd {
+  color: rgb(95, 39, 205);
+  margin-left: 196px;
+  font-size: small;
+}
+a {
+  color: rgb(95, 39, 205);
+}
+.text {
+  font-size: 24px;
+  color: rgb(31, 19, 91);
+  padding: 8px;
+  font-family: Roboto;
+  margin-left: -22px;
+}
+
+.or {
+  display: flex;
+  margin-left: 90px;
+  margin-top: 20px;
+  margin-bottom: 13px;
+  font-weight: 400px;
+  font-size: 20px;
+}
+
+.left {
+  width: 42px;
+  margin-top: 12px;
+  border: 0.1px solid rgba(0, 0, 0, 0.5);
+}
+
+.right {
+  width: 42px;
+  margin-top: 12px;
+  border: 0.1px solid rgba(0, 0, 0, 0.5);
+}
+
+input {
+  width: 308px;
+  height: 40px;
+}
+
+.lab {
+  margin-bottom: 5px;
+}
+
+.googl {
   height: 40px;
   border: 0.5px solid blueviolet;
   width: 250px;
@@ -37,71 +157,24 @@ p {
   text-align: center;
   color: black;
   font-weight: 500;
-  margin-right: 22%;
-}
-.google span {
-  margin-right: 10px;
 }
 
-.googleinner {
-  padding: 1px 24px;
+.char {
+  text-align: center;
+  font-size: 18px;
+  color: rgb(95, 95, 95);
+  margin-top: 10px;
 }
-.or {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.terms {
+  font-size: 18px;
+  font-weight: 400;
   margin-top: 20px;
 }
-.orleft {
-  height: 0px;
-  width: 50px;
-  border: 0.1px solid blueviolet;
+.studemp span {
+  margin: 10px 30px 20px 30px;
 }
-
-.orright {
-  height: 0px;
-  width: 50px;
-  border: 0.1px solid blueviolet;
-}
-
-.frm {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  margin-left: 80px;
-}
-
-label {
-  margin-top: 10px;
-}
-input {
-  width: 90%;
-}
-
 ::placeholder {
+  font-size: 18px;
   color: black;
-}
-
-button {
-  margin: 20px 2px;
-}
-.term {
-  margin-top: 10px;
-  margin-right: 40px;
-  font-size: 15px;
-}
-.Mac {
-  width: 80%;
-  height: 10%;
-}
-
-.sgnup {
-  width: 20pc;
-}
-.Char {
-  color: grey;
-}
-.account {
-  font-size: 20px;
 }

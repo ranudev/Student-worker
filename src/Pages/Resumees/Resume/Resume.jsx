@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../Css/Resume/Resume.css";
+import style from "../../../Css/Resume/Resume.module.css";
 
 import Footer from "../../../components/Footer/Footer";
 import Header2 from "../../Header/Header2/Header2";
@@ -8,18 +8,18 @@ function Resume() {
   return (
     <React.Fragment>
       <Header2 />
-      <hr style={{ color: " rgb(0, 0, 0)" }} />
-      <div className="resume">
+      <hr />
+      <div className={style.resume}>
         <h4>Resume</h4>
       </div>
-      <div className="box">
-        <div className="name">
+      <div className={style.box}>
+        <div className={style.name}>
           <h2>Ayo David</h2>
           <p>Appa , Lagos</p>
         </div>
         <hr />
 
-        <div className="intro">
+        <div className={style.intro}>
           <h5> Education</h5>
           <p>
             Mechanical Engineer <br />
@@ -27,7 +27,7 @@ function Resume() {
             <span>2020-2021</span>
           </p>
         </div>
-        <div className="skills">
+        <div className={style.skills}>
           <h5> Skills</h5>
           <p>
             Graphic design <br />
@@ -35,7 +35,7 @@ function Resume() {
             Teamwork
           </p>
         </div>
-        <div className="intro">
+        <div className={style.intro}>
           <h5> Contact</h5>
           <div>
             <p>
@@ -48,7 +48,7 @@ function Resume() {
           </div>
         </div>
 
-        <div className="reject">
+        <div className={style.reject}>
           <a> Reject Applicant</a>
         </div>
       </div>

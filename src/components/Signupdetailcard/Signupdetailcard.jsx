@@ -1,7 +1,7 @@
 import React from "react";
 //import Education from "../Education/Education";
 // import "../../Css/Persondet/Persondetail.css";
-import styles from "../../Css/Personaldetail2/Personaldetail.module.css";
+import styles from "../../Css/Signupdetail/Signupdetail.module.css";
 //import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";

@@ -3,17 +3,17 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import Header2 from "../../Pages/Header/Header2/Header2";
-import "../../Css/Orgdet/Orgdet.css";
-import Footer from "../../components/Footer/Footer";
+import style from "../../Css/Orgdet/Orgdet.module.css";
+//import Footer from "../../components/Footer/Footer";
 
 function Orgdet() {
   return (
     <React.Fragment>
       <Header2 />
-      <div className="header">
+      <div className={style.header}>
         <h3>Organization Details</h3>
       </div>
-      <div className="box">
+      <div className={style.box}>
         <div>
           <div>
             <label htmlFor="">Name</label>
@@ -42,22 +42,22 @@ function Orgdet() {
           </div>
         </div>
       </div>
-      <div className="lower">
-        <div className="circles">
-          <FontAwesomeIcon icon={faCircle} style={{}} />
+      <div className={style.lower}>
+        <div className={style.circles}>
+          <FontAwesomeIcon icon={faCircle} />
           <FontAwesomeIcon icon={faCircle} />
           <FontAwesomeIcon icon={faCircle} />
         </div>
-        <div className="btn">
+        <div className={style.btn}>
           <button> Previous</button>
           <button>Next</button>
         </div>
-        <div className="link">
+        <div className={style.link}>
           <a> Skip</a>
         </div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </React.Fragment>
   );
 }

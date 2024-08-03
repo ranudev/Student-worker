@@ -45,38 +45,14 @@ function Skill() {
           </div>
         </div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
+      <div className={styles.bottom}>
         {" "}
-        <button
-          style={{
-            padding: "10px",
-            width: "180px",
-            fontSize: "1.8em",
-            textAlign: "center",
-            borderRadius: "3px",
-          }}
-        >
-          Previous
-        </button>
+        <button className={styles.prevbtn}>Previous</button>
         <button
           onClick={() => {
             gotores();
           }}
-          style={{
-            padding: "10px",
-            width: "180px",
-            backgroundColor: " rgb(10, 103, 79)",
-            color: "white",
-            fontSize: "1.8em",
-            textAlign: "center",
-            borderRadius: "3px",
-          }}
+          className={styles.nxtbtn}
         >
           Next
         </button>

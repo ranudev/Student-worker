@@ -7,6 +7,7 @@ import UnAuthenticatedRoutes from "./routes/UnAuthenticatedRoutes";
 
 import { RouterProvider } from "react-router-dom";
 import AuthenticatedRoutes from "./routes/AuthenticatedRoutes";
+//import Jobtitle from "./components/Jobtitle/Jobtitle";
 //import CreatePost from "./components/createPost/CreatePost";
 //import SubmitCard from "./components/submitCard/SubmitCard";
 //import Resumejob from "./Pages/Resumees/Resumejob/Resumejob";
@@ -17,7 +18,6 @@ function App() {
       <RouterProvider
         router={isLoggedin ? AuthenticatedRoutes : UnAuthenticatedRoutes}
       />
-
       <Footer />
     </>
   );

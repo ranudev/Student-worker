@@ -1,6 +1,6 @@
 import React from "react";
 //import Education from "../Education/Education";
-import "../../Css/Persondet/Persondetail.css";
+import style from "../../Css/Persondet/Persondetail.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
@@ -8,37 +8,21 @@ function Persondetail() {
   return (
     <React.Fragment>
       <form>
-        <div
-          style={{
-            backgroundColor: "rgb(229,229,229)",
-            height: "100vh",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
-          }}
-        >
-          <div className="Form">
-            <div className="icon">
+        <div className={style.container}>
+          <div className={style.Form}>
+            <div className={style.icones}>
               <FontAwesomeIcon icon={faXmark} />
             </div>
             <h3>Person Details</h3>
 
-            <div className="labels">
+            <div className={style.labels}>
               <label htmlFor="">First name</label>
               <input
                 type="text"
                 name=""
                 id=""
                 placeholder="Ayo"
-                style={{
-                  fontSize: "20px",
-                  padding: "20px",
-                  width: "350px",
-                  height: "15px",
-                  borderRadius: "3px",
-                  border: "1px solid rgba(159, 125, 225, 0.5)",
-                }}
+                className={style.Fname}
               />
             </div>
             <div className="labels">
@@ -49,52 +33,29 @@ function Persondetail() {
                 id=""
                 placeholder="David"
                 // style={{ width: "100px" }}
-                style={{
-                  fontSize: "20px",
-                  padding: "20px",
-                  width: "350px",
-                  height: "15px",
-                  borderRadius: "3px",
-                  border: "1px solid rgba(159, 125, 225, 0.5)",
-                }}
+                className={style.Fname}
               />
             </div>
-            <div className="labels">
+            <div className={style.labels}>
               <label htmlFor="">Mobile number</label>
-              <div className="tel">
+              <div className={style.tel}>
                 <input
                   type="tel"
                   name=""
                   id=""
                   placeholder="David"
-                  // style={{ width: "100px" }}
-                  style={{
-                    padding: "20px",
-                    fontSize: "20px",
-                    width: "73px",
-                    height: "15px",
-                    borderRadius: "3px",
-                    border: "1px solid rgba(159, 125, 225, 0.5)",
-                  }}
+                  className={style.Mob}
                 />
                 <input
                   type="tel"
                   name=""
                   id=""
                   placeholder="David"
-                  // style={{ width: "100px" }}
-                  style={{
-                    padding: "20px",
-                    fontSize: "20px",
-                    width: "259px",
-                    height: "15px",
-                    borderRadius: "3px",
-                    border: "1px solid rgba(159, 125, 225, 0.5)",
-                  }}
+                  className={style.tell}
                 />
               </div>
             </div>
-            <div className="year">
+            <div className={style.year}>
               <div>
                 <label htmlFor="">Current state</label>
                 <input
@@ -102,14 +63,7 @@ function Persondetail() {
                   name=""
                   id=""
                   placeholder="Lagos"
-                  style={{
-                    width: "150px",
-                    height: "40px",
-                    borderRadius: "3px",
-                    border: "1px solid rgba(159, 125, 225, 0.5)",
-                    fontSize: "20px",
-                    padding: "10px",
-                  }}
+                  className={style.state}
                 />
               </div>
               <div>
@@ -119,18 +73,11 @@ function Persondetail() {
                   name=""
                   id=""
                   placeholder="Apapa"
-                  style={{
-                    height: "40px",
-                    width: "150px",
-                    borderRadius: "3px",
-                    border: "1px solid rgba(159, 125, 225, 0.5)",
-                    fontSize: "20px",
-                    padding: "11px",
-                  }}
+                  className={style.city}
                 />
               </div>
             </div>
-            <button className="update">Update</button>
+            <button className={style.update}>Update</button>
           </div>
         </div>
       </form>

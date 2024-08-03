@@ -4,7 +4,7 @@ import { NavLink, Outlet } from "react-router-dom";
 export default function UnAuthenticatedHeader() {
   return (
     <div>
-      <nav className={style.nav}>
+      <nav className={style.nav} id={style.navigation}>
         <div>
           <a>
             <h1>Student worker</h1>
@@ -16,6 +16,7 @@ export default function UnAuthenticatedHeader() {
             <li>
               <NavLink
                 to="/"
+                className={({ isActive }) => (isActive ? style.active : "")}
                 style={{
                   textDecoration: "none",
                 }}
@@ -26,6 +27,7 @@ export default function UnAuthenticatedHeader() {
             <li>
               <NavLink
                 to="/job"
+                className={({ isActive }) => (isActive ? style.active : "")}
                 style={{
                   textDecoration: "none",
                 }}

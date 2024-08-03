@@ -7,13 +7,16 @@ function Login() {
     <React.Fragment>
       <div className={style.color}>
         <div className={style.header}>
-          <h4>Student worker</h4>
-          <p className={style.text}>Login to your account</p>
+          <div>
+            <h4>Student worker</h4>
+          </div>
+          <div>
+            <p className={style.text}>Login to your account</p>
+          </div>
         </div>
         <div className={style.body}>
           <div className={style.form}>
-            <div className={style.stud}>
-              {" "}
+            <div>
               <span className={style.stud}>Student </span>
               <span className={style.emp}>Employer</span>
               <hr />
@@ -40,7 +43,7 @@ function Login() {
               />
             </div>
             <div className={style.label}>
-              <label htmlFor="" className="lab">
+              <label htmlFor="" className={style.lab}>
                 Password
               </label>
               <input type="password" name="" id="" />

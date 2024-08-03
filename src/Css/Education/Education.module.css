@@ -1,0 +1,88 @@
+* {
+  font-family: Roboto;
+}
+
+.update {
+  width: 349px;
+  margin-top: 20px;
+  background-color: rgb(10, 103, 79);
+  color: white;
+  padding: 5px;
+  align-self: center;
+  font-size: 25px;
+  margin-left: 1px;
+}
+.Form {
+  background-color: white;
+  width: 515px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 5%;
+}
+h3 {
+  color: rgb(31, 19, 91);
+  font-family: Roboto;
+  font-size: 33px;
+  font-weight: 400;
+  margin-bottom: 22px;
+}
+.labels {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  flex-direction: column;
+  font-size: 30px;
+  margin-top: 20px;
+}
+.labels input {
+  font-size: 20px;
+}
+.year {
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+
+  gap: 45px;
+}
+.year label {
+  font-size: 30px;
+}
+
+.icon {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-left: 317px;
+  margin-top: -69px;
+  font-size: 30px;
+  color: rgba(159, 125, 225, 0.5);
+}
+.parent {
+  background-color: rgb(229, 229, 229);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.university {
+  padding: 20px;
+  width: 350px;
+  height: 15px;
+  border-radius: 3px;
+  border: 1px solid rgba(159, 125, 225, 0.5);
+}
+.year {
+  width: 150px;
+  height: 40px;
+  border-radius: 3px;
+  border: 1px solid rgba(159, 125, 225, 0.5);
+  font-size: 20px;
+  padding: 10px;
+}

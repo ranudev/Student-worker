@@ -1,68 +1,68 @@
-import { useNavigate, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import style from "../../Css/Studsignup/Studsignup.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 const Studsignup = () => {
-  const navigate = useNavigate();
-  const gotonext = () => {
-    navigate("/signuppersondetail");
-  };
+  // const navigate = useNavigate();
+  // const gotonext = () => {
+  //   navigate("/signuppersondetail");
+  // };
   return (
-    <div className={style.outer}>
-      <h6>Student Worker</h6>
-      <p>Student sign up</p>
-      <div className={style.innerbox}>
-        <div className={style.google}>
-          <div className={style.googleinner}>
+    <div className={style.color}>
+      <div className={style.header}>
+        <div>
+          <h4>Student worker</h4>
+        </div>
+        <div>
+          <p className={style.text}>Student signup</p>
+        </div>
+      </div>
+      <div className={style.body}>
+        <div className={style.form}>
+          <div className={style.studemp}>
+            <span className={style.stud}>Student </span>
+            <span className={style.emp}>Employer</span>
+            <hr />
+          </div>
+          <div className={style.googl}>Signup with Google</div>
+          <div className={style.or}>
             <span>
-              <FontAwesomeIcon icon={faGoogle} style={{ color: "#ffffff" }} />
+              <hr className={style.left} />
             </span>
-            sign up with Google
+            <span>or</span>
+            <span>
+              <hr className={style.right} />
+            </span>
           </div>
-        </div>
-        <div className={style.or}>
-          <div className={style.orleft}></div>
-          or
-          <div className={style.orright}></div>
-        </div>
-        <form className={style.frm}>
-          <label>Email</label>
-          <input
-            type="email"
-            name=""
-            id=""
-            className={style.Mac}
-            placeholder="ayodavid123@gmail.com"
-          />
-          <label>Password</label>
-          <input
-            type="password"
-            name=""
-            id=""
-            placeholder="Machine"
-            className={style.Mac}
-          />
-          <div className={style.Char}>
-            <p>Minimum of 6 characters</p>
+          <div className={style.label}>
+            <label htmlFor="" className={style.lab}>
+              Email
+            </label>
+            <input
+              type="email"
+              name=""
+              id=""
+              placeholder="ayodavid@gmail.com"
+            />
           </div>
+          <div className={style.lavel}>
+            <label htmlFor="" className={style.lab}>
+              Password
+            </label>
+            <input type="password" name="" id="" />
+          </div>
+
+          <p className={style.char}>Minimum 6 Character</p>
+
           <p className={style.terms}>
             By Registering you are agree to our
             <NavLink>Terms and Condtions</NavLink>{" "}
           </p>
-
-          <button
-            onClick={() => {
-              gotonext();
-            }}
-            className={style.sgnup}
-          >
-            Signup
-          </button>
-
+          <button className={style.log}>Signup</button>
           <p className={style.account}>
-            Already have an account<NavLink to="/login">Login</NavLink>
+            Already have an account? <NavLink>Login</NavLink>
           </p>
-        </form>
+        </div>
       </div>
     </div>
   );
