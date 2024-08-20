@@ -1,31 +1,39 @@
 .box {
-  padding: 20px;
+  padding: 20px 20px 20px 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   max-width: 600px;
 
   margin: auto;
 }
-h1 {
+h2 {
+  font-weight: 400;
   text-align: center;
+  color: rgb(31, 19, 91);
 }
 
 .para {
   text-align: center;
   margin: auto;
   color: rgb(31, 19, 91);
+  font-size: 20px;
 }
 .bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 180px;
   align-items: center;
+  margin-top: 20px;
 }
 .prevbtn {
   padding: 10px;
   width: 180px;
+  background-color: rgb(10, 103, 79);
+  color: white;
   font-size: 1.8em;
   text-align: center;
   border-radius: 3px;
+  border: none;
 }
 .nxtbtn {
   padding: 10px;
@@ -35,4 +43,25 @@ h1 {
   font-size: 1.8em;
   text-align: center;
   border-radius: 3px;
+  border: none;
+}
+label {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+input {
+  border: 1px solid rgba(159, 125, 225, 0.5);
+  border-radius: 3px;
+  font-size: 30px;
+  width: 95%;
+  padding: 10px;
+}
+::placeholder {
+  color: black;
+}
+.cross {
+  font-size: 30px;
+  color: rgba(159, 125, 225, 0.5);
+  text-align: center;
 }

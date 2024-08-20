@@ -13,7 +13,7 @@ function Persondetail() {
             <div className={style.icones}>
               <FontAwesomeIcon icon={faXmark} />
             </div>
-            <h3>Person Details</h3>
+            <h3>Personal Details</h3>
 
             <div className={style.labels}>
               <label htmlFor="">First name</label>
@@ -25,7 +25,7 @@ function Persondetail() {
                 className={style.Fname}
               />
             </div>
-            <div className="labels">
+            <div className={style.labels}>
               <label htmlFor="">Last name</label>
               <input
                 type="text"
@@ -43,38 +43,46 @@ function Persondetail() {
                   type="tel"
                   name=""
                   id=""
-                  placeholder="David"
+                  placeholder="+234"
                   className={style.Mob}
                 />
                 <input
                   type="tel"
                   name=""
                   id=""
-                  placeholder="David"
+                  placeholder="09034586"
                   className={style.tell}
                 />
               </div>
             </div>
-            <div className={style.year}>
-              <div>
-                <label htmlFor="">Current state</label>
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="Lagos"
-                  className={style.state}
-                />
+            <div className={style.State}>
+              <div className={style.innerstate}>
+                <div>
+                  <label htmlFor="">Current state</label>
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="Lagos"
+                    className={style.state}
+                  />
+                </div>
               </div>
-              <div>
-                <label htmlFor="">City</label>
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="Apapa"
-                  className={style.city}
-                />
+              <div className={style.innercity}>
+                <div>
+                  <label htmlFor="">City</label>
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="Apapa"
+                    className={style.City}
+                  />
+                </div>
               </div>
             </div>
             <button className={style.update}>Update</button>

@@ -14,19 +14,76 @@ import Login from "../components/Login/Login";
 import Jobtitleatcompany from "../components/Jobtitatcomp/Jobtitleatcompany";
 import Resumejob from "../Pages/Resumees/Resumejob/Resume";
 import Signuppersondetail from "../components/Signuppersondetail/Signuppersondetail";
-import Layout from "../Layout/layout/Layout";
+import LayoutCmp from "../layoutcmp/LayoutCmp";
 
 const UnAuthenticatedRoutes = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
-      <Route path index element={<Home />} />
-      <Route path="job" element={<Job />} />
-      <Route path="employer" element={<Employer />} />
-      <Route path="studsignup" element={<Studsignup />} />
-      <Route path="login" element={<Login />} />
-      <Route path="Jobtitleatcompany" element={<Jobtitleatcompany />} />
-      <Route path="resumejob" element={<Resumejob />} />
-      <Route path="/signuppersondetail" element={<Signuppersondetail />} />
+    <Route path="/">
+      <Route
+        path
+        index
+        element={
+          <LayoutCmp>
+            <Home />
+          </LayoutCmp>
+        }
+      />
+      <Route
+        path="job"
+        element={
+          <LayoutCmp>
+            <Job />
+          </LayoutCmp>
+        }
+      />
+      <Route
+        path="employer"
+        element={
+          <LayoutCmp>
+            <Employer />
+          </LayoutCmp>
+        }
+      />
+      <Route
+        path="studsignup"
+        element={
+          <LayoutCmp>
+            <Studsignup />
+          </LayoutCmp>
+        }
+      />
+      <Route
+        path="login"
+        element={
+          <LayoutCmp>
+            <Login />
+          </LayoutCmp>
+        }
+      />
+      <Route
+        path="Jobtitleatcompany"
+        element={
+          <LayoutCmp>
+            <Jobtitleatcompany />
+          </LayoutCmp>
+        }
+      />
+      <Route
+        path="resumejob"
+        element={
+          <LayoutCmp>
+            <Resumejob />
+          </LayoutCmp>
+        }
+      />
+      <Route
+        path="/signuppersondetail"
+        element={
+          <LayoutCmp>
+            <Signuppersondetail />
+          </LayoutCmp>
+        }
+      />
     </Route>
   )
 );

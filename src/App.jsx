@@ -1,10 +1,12 @@
 import { useState } from "react";
 import "./App.css";
+//import Skill from "./components/Skillmodal/Skill";
+//import Education from "./components/Education/Education";
 
-import Footer from "./components/Footer/Footer";
+//import Footer from "./components/Footer/Footer";
 
 import UnAuthenticatedRoutes from "./routes/UnAuthenticatedRoutes";
-
+//import Persondetail from "../src/components/Persondet/Persondetail3";
 import { RouterProvider } from "react-router-dom";
 import AuthenticatedRoutes from "./routes/AuthenticatedRoutes";
 //import Jobtitle from "./components/Jobtitle/Jobtitle";
@@ -18,7 +20,11 @@ function App() {
       <RouterProvider
         router={isLoggedin ? AuthenticatedRoutes : UnAuthenticatedRoutes}
       />
-      <Footer />
+
+      {/* <Persondetail /> */}
+      {/* <Education /> */}
+      {/* <Skill /> */}
+      {/* <Footer /> */}
     </>
   );
 }

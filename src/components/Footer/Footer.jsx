@@ -20,10 +20,6 @@ function Footer() {
           </ul>
         </div>
 
-        <div className={style.copy}>
-          <p>Copyright Student Worker 2024.</p>
-        </div>
-
         <div className={style.right}>
           <div>
             <h4>CONNECT WITH US</h4>
@@ -43,6 +39,9 @@ function Footer() {
             </div>
           </div>
         </div>
+      </div>
+      <div className={style.copy}>
+        <p>Copyright Student Worker 2024.</p>
       </div>
     </React.Fragment>
   );

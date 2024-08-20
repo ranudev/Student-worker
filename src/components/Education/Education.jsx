@@ -23,7 +23,7 @@ function Education() {
               className={style.university}
             />
           </div>
-          <div className="labels">
+          <div className={style.labels}>
             <label htmlFor="">Course of Study</label>
             <input
               type="text"
@@ -33,7 +33,7 @@ function Education() {
               className={style.university}
             />
           </div>
-          <div className={style.year}>
+          <div className={style.years}>
             <div>
               <label htmlFor="">Start Year</label>
               <input

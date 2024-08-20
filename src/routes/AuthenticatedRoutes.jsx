@@ -10,15 +10,47 @@ import Signuppersondetail from "../components/Signuppersondetail/Signuppersondet
 import Skill from "../components/Skillmodal/Skill";
 //import Studsignup from "../components/Studsignup/Studsignup";
 import Resume2 from "../Pages/Resumees/Resume2/Resume2";
-import Header from "../components/Header/UnAuthenticatedHeader";
+//import Header from "../components/Header/UnAuthenticatedHeader";
 
+import LayoutCmp from "../layoutcmp/LayoutCmp";
 const AuthenticatedRoutes = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Header />}>
-      <Route path="/signuppersondetail" element={<Signuppersondetail />} />
-      <Route path="/signupeducation" element={<Signupeducation />} />
-      <Route path="/skill" element={<Skill />} />
-      <Route path="/resume2" element={<Resume2 />} />
+    <Route>
+      <Route
+        path="/signuppersondetail"
+        element={
+          <LayoutCmp>
+            {" "}
+            <Signuppersondetail />
+          </LayoutCmp>
+        }
+      />
+      <Route
+        path="/signupeducation"
+        element={
+          <LayoutCmp>
+            <Signupeducation />
+          </LayoutCmp>
+        }
+      />
+      <Route
+        path="/skill"
+        element={
+          <LayoutCmp>
+            {" "}
+            <Skill />
+          </LayoutCmp>
+        }
+      />
+      <Route
+        path="/resume2"
+        element={
+          <LayoutCmp>
+            {" "}
+            <Resume2 />
+          </LayoutCmp>
+        }
+      />
     </Route>
   )
 );

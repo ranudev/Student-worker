@@ -1,12 +1,14 @@
 import React from "react";
 import styles from "../../Css/Skill/Skill.module.css";
-import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+//import { useNavigate } from "react-router-dom";
 
 function Skill() {
-  const navigate = useNavigate();
-  const gotores = () => {
-    navigate("/resume2");
-  };
+  // const navigate = useNavigate();
+  // const gotores = () => {
+  //   navigate("/resume2");
+  // };
 
   // const navigate =useNavigate();
   // const gotores= () ={
@@ -14,10 +16,14 @@ function Skill() {
   // }
   return (
     <React.Fragment>
-      <h1>Skills</h1>
+      <div className={styles.cross}>
+        <FontAwesomeIcon icon={faXmark} />
+      </div>
+      <h2>Skills</h2>
 
       <p className={styles.para}>
-        Improve your job search byadding relevant skills
+        Improve your job search by adding <br />
+        relevant skills
       </p>
       <div className={styles.box}>
         <div>
@@ -49,9 +55,9 @@ function Skill() {
         {" "}
         <button className={styles.prevbtn}>Previous</button>
         <button
-          onClick={() => {
-            gotores();
-          }}
+          // onClick={() => {
+          //   gotores();
+          // }}
           className={styles.nxtbtn}
         >
           Next

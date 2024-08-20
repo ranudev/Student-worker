@@ -9,6 +9,7 @@ const Card = (prop) => {
             <img src={prop.img} />
           </div>
           <p className={style.text}>{prop.text}</p>
+          <p>Helloo</p>
         </div>
       </div>
     </>

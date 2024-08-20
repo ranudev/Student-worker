@@ -4,13 +4,17 @@
 
 .update {
   width: 349px;
-  margin-top: 20px;
+  margin-top: 40px;
   background-color: rgb(10, 103, 79);
   color: white;
   padding: 5px;
   align-self: center;
   font-size: 25px;
   margin-left: 1px;
+  border: none;
+}
+h3 {
+  color: rgba(31, 19, 91, 1);
 }
 .Form {
   background-color: white;
@@ -42,28 +46,26 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-.year {
+.State {
   margin-top: 20px;
-
+  gap: 70px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   text-align: left;
-
-  gap: 2px;
 }
-.year label {
+.State label {
   font-size: 30px;
 }
 
-.icon {
+.icones {
   display: flex;
   align-items: flex-end;
   justify-content: center;
   margin-left: 317px;
   margin-top: -69px;
   font-size: 30px;
-  color: rgba(159, 125, 225, 0.5);
+  color: rgba(159, 125, 225, 1);
 }
 .tel {
   display: flex;
@@ -90,7 +92,7 @@ h3 {
 .Mob {
   padding: 20px;
   font-size: 20px;
-  width: 73px;
+  width: 90px;
   height: 15px;
   border-radius: 3px;
   border: 1px solid rgba(159, 125, 225, 0.5);
@@ -98,24 +100,40 @@ h3 {
 .tell {
   padding: 20px;
   font-size: 20px;
-  width: 259px;
+  width: 240px;
   height: 15px;
   border-radius: 3px;
   border: 1px solid rgba(159, 125, 225, 0.5);
 }
 .state {
-  width: 150px;
-  height: 40px;
   border-radius: 3px;
   border: 1px solid rgba(159, 125, 225, 0.5);
-  font-size: 20px;
+  font-weight: 400;
+  width: 160px;
   padding: 10px;
 }
-.city {
-  height: 40px;
-  width: 150px;
+.City {
   border-radius: 3px;
   border: 1px solid rgba(159, 125, 225, 0.5);
   font-size: 20px;
-  padding: 11px;
+  width: 100px;
+  padding: 10px;
+}
+::placeholder {
+  color: #000000e6;
+  font-size: 21px;
+  font-weight: 400;
+}
+.innerstate {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.innercity {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
