@@ -37,6 +37,7 @@ export default function UnAuthenticatedHeader() {
             </li>
             <li>
               <NavLink
+                className={({ isActive }) => (isActive ? style.active : "")}
                 to="/employer"
                 style={{
                   textDecoration: "none",

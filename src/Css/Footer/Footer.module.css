@@ -3,7 +3,7 @@
   background-color: rgb(52, 31, 151);
   display: flex;
   justify-content: space-between;
-  padding: 0px 40px 0px 40px;
+  padding: 20px 40px 20px 40px;
   align-items: center;
 }
 
@@ -57,8 +57,8 @@
   width: 192px;
 }
 
-.copy {
+.copy p {
   text-align: center;
   color: white;
-  margin-top: -40px;
+  margin-top: -20px;
 }

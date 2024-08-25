@@ -53,6 +53,9 @@
   display: flex;
   align-items: center;
 }
+.labe label {
+  font-size: 20px;
+}
 .check {
   display: flex;
 
@@ -68,6 +71,7 @@
 }
 .site {
   margin-top: 5px;
+  font-size: 20px;
 }
 .check div {
   display: flex;
@@ -80,4 +84,15 @@
 }
 .apply {
   border: none;
+}
+
+.jobttl {
+  display: flex;
+  flex-direction: column;
+}
+.filline {
+  margin: 0px;
+}
+.location label {
+  font-size: 20px;
 }

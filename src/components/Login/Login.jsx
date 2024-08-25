@@ -1,7 +1,7 @@
 import React from "react";
 import style from "../../Css/Login/Login.module.css";
-import Footer2 from "../Footer2/Footer2";
-import { NavLink } from "react-router-dom";
+//import Footer2 from "../Footer2/Footer2";
+import { Link, NavLink } from "react-router-dom";
 function Login() {
   return (
     <React.Fragment>
@@ -16,7 +16,7 @@ function Login() {
         </div>
         <div className={style.body}>
           <div className={style.form}>
-            <div>
+            <div className={style.studemp}>
               <span className={style.stud}>Student </span>
               <span className={style.emp}>Employer</span>
               <hr />
@@ -48,9 +48,9 @@ function Login() {
               </label>
               <input type="password" name="" id="" />
             </div>
-            <a href="" className={style.fgtpswd}>
+            <Link href="" className={style.fgtpswd}>
               Forgot password?
-            </a>
+            </Link>
             <button className={style.log}>Login</button>
             <p className={style.account}>
               Dont have an account? <NavLink to="/studsignup">Signup</NavLink>
@@ -58,7 +58,7 @@ function Login() {
           </div>
         </div>
       </div>
-      <Footer2 />
+      {/* <Footer2 /> */}
     </React.Fragment>
   );
 }

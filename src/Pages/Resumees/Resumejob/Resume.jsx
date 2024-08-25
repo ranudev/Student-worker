@@ -1,6 +1,7 @@
 import React from "react";
 import style from "../../../Css/Resumejob/Resumejob.module.css";
 import pencil from "../../../assets/pencil.png";
+import { NavLink } from "react-router-dom";
 //import Header3 from "../../Header/Header3/Header3";
 //import Footer from "../../../components/Footer/Footer";
 function Resumejob() {
@@ -59,7 +60,10 @@ function Resumejob() {
         </div>
       </div>
       <div className={style.complete}>
-        <button>Complete</button>
+        <button>
+          {" "}
+          <NavLink to="/job"> Complete</NavLink>
+        </button>
       </div>
       {/* <Footer /> */}
     </React.Fragment>

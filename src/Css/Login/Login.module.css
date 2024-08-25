@@ -2,6 +2,7 @@
   background-color: rgb(229, 229, 229);
   height: 100vh;
   text-align: center;
+  padding: 10px;
 
   display: flex;
   justify-content: center;
@@ -72,14 +73,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: 18px;
-  font-weight: 400;
+
   line-height: 21px;
 }
 .log {
-  margin-left: -1px;
-  width: 308px;
-  margin-top: 20px;
+  width: 250px;
+  margin: auto;
   background-color: rgb(10, 103, 79);
   color: white;
   padding: 2%;
@@ -96,7 +95,7 @@
 }
 .fgtpswd {
   color: rgb(95, 39, 205);
-  margin-left: 196px;
+  margin: 0px 0px 0px 250px;
   font-size: small;
 }
 a {
@@ -112,9 +111,10 @@ a {
 
 .or {
   display: flex;
-  margin-left: 90px;
+  /* margin-left: 90px;
   margin-top: 20px;
-  margin-bottom: 13px;
+  margin-bottom: 13px; */
+  margin: auto;
   font-weight: 400px;
   font-size: 20px;
 }
@@ -132,13 +132,8 @@ a {
 }
 
 input {
-  width: 308px;
   height: 40px;
-}
-
-.lab {
-  margin-bottom: 9px;
-  margin-top: 5px;
+  border-color: 0.5px solid blueviolet;
 }
 
 .googl {
@@ -157,5 +152,19 @@ input {
 }
 hr {
   width: 265px;
-  margin-top: 10px;
+  margin: auto;
+}
+
+.studemp {
+  margin: auto;
+}
+
+.lab {
+  font-size: 30px;
+  font-weight: 300;
+  color: black;
+}
+
+.label {
+  padding: 10px;
 }

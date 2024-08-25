@@ -45,7 +45,7 @@ function Job() {
 
           <div className={style.Filterbox}>
             <p>Narrow your results</p>
-            <hr />
+            <hr className={style.filline} />
             <div className={style.location}>
               <label>Location:</label>
 
@@ -81,13 +81,12 @@ function Job() {
           </div>
         </div>
 
-        <div>
+        <div className={style.jobttljob}>
           <Jobtitle />
+          {/* <Jobtitle />
+          <Jobtitle />
+          <Jobtitle /> */}
         </div>
-
-        {/* <Jobtitle />
-        <Jobtitle />
-        <Jobtitle /> */}
       </div>
     </React.Fragment>
   );

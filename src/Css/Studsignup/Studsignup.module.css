@@ -9,12 +9,14 @@
   flex-direction: column;
 }
 .header {
-  margin-left: 60px;
+  padding: 40px 0px 40px 30px;
+  text-align: center;
 }
 .color h4 {
   font-family: Roboto;
   font-size: 27px;
   color: rgb(31, 19, 91);
+  text-align: center;
 }
 .header h4 {
   font-size: 40px;
@@ -22,21 +24,29 @@
 
 .header p {
   font-size: 30px;
+  text-align: center;
+  padding: 20px 0px 5px 0px;
+  margin-left: 50px;
 }
 .body {
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: white;
-
-  width: 410px;
-  height: 470px;
+  padding: 40px 40px 40px 40px;
+  width: 400px;
+  margin-bottom: 20px;
+  /* height: 470px; */
 }
+
 .stud {
   color: rgb(95, 39, 205);
   font-family: Roboto;
   font-size: 24px;
   font-weight: 400;
+  margin-top: 13%;
+  margin-left: 15px;
+  margin-right: 58px;
 }
 
 .emp {
@@ -44,6 +54,7 @@
   font-family: Roboto;
   font-size: 23px;
   font-weight: 400;
+  margin-top: 32px;
 }
 
 .form {
@@ -51,13 +62,13 @@
   flex-direction: column;
   align-items: flex-start;
   margin: auto;
-  border: 1px solid black;
-  padding: 40px;
+
+  /* padding: 20px; */
 }
 .login {
   border-radius: 0.1px;
   text-align: center;
-  width: 55%;
+  /* width: 55%; */
   padding: 4%;
   margin-left: 50px;
   margin-top: 25px;
@@ -68,7 +79,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: 18px;
+  /* font-size: 18px; */
   font-weight: 400;
   line-height: 21px;
   margin-top: 20px;
@@ -77,23 +88,22 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: 18px;
+  /* font-size: 12px; */
   font-weight: 400;
   line-height: 21px;
 }
 .log {
-  margin-left: -1px;
-  width: 308px;
-  margin-top: 20px;
+  /* width: 308px; */
+  margin: 20px 0px 0px 30px;
   background-color: rgb(10, 103, 79);
   color: white;
-  padding: 5%;
+  padding: 2%;
   border: none;
   font-size: 20px;
 }
 .account {
   text-align: center;
-  margin: 20px auto;
+  margin: auto;
   font-size: 18px;
   font-weight: 500;
 
@@ -109,17 +119,14 @@ a {
 }
 .text {
   font-size: 24px;
-  color: rgb(31, 19, 91);
-  padding: 8px;
+  /* color: rgb(31, 19, 91); */
+  margin-right: 60px;
   font-family: Roboto;
-  margin-left: -22px;
 }
 
 .or {
   display: flex;
-  margin-left: 90px;
-  margin-top: 20px;
-  margin-bottom: 13px;
+  margin: auto;
   font-weight: 400px;
   font-size: 20px;
 }
@@ -138,11 +145,14 @@ a {
 
 input {
   width: 308px;
-  height: 40px;
+  height: 30px;
 }
 
 .lab {
   margin-bottom: 5px;
+  font-size: 20px;
+  color: black;
+  font-weight: 400;
 }
 
 .googl {
@@ -160,21 +170,23 @@ input {
 }
 
 .char {
-  text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   color: rgb(95, 95, 95);
   margin-top: 10px;
 }
 
 .terms {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  margin-top: 20px;
+  margin-top: 10px;
 }
-.studemp span {
-  margin: 10px 30px 20px 30px;
+.studemp {
+  margin: auto;
 }
 ::placeholder {
-  font-size: 18px;
+  font-size: 16px;
   color: black;
+}
+hr {
+  margin: auto;
 }

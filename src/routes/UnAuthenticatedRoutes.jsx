@@ -18,10 +18,9 @@ import LayoutCmp from "../layoutcmp/LayoutCmp";
 
 const UnAuthenticatedRoutes = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/">
+    <Route>
       <Route
-        path
-        index
+        path="/"
         element={
           <LayoutCmp>
             <Home />

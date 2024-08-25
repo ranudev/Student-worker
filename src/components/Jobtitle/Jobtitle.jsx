@@ -33,7 +33,7 @@ function Jobtitle() {
             <span>24hrs/Week</span>
           </div>
         </div>
-        <hr />
+        <hr className={style.line} />
         <div className={style.foot}>
           <div className={style.app}>
             <p>10days ago</p>

@@ -4,13 +4,9 @@ import React from "react";
 import styles from "../../Css/Signupdetail/Signupdetail.module.css";
 //import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
+//import { NavLink } from "react-router-dom";
 
 function Signupdetailcard(prop) {
-  const navigate = useNavigate();
-  const gotoeduc = () => {
-    navigate("/signupeducation");
-  };
   return (
     <React.Fragment>
       <h1>{prop.text}</h1>
@@ -47,56 +43,8 @@ function Signupdetailcard(prop) {
           </div>
         </form>
       </div>
-
-      <div className={styles.next}>
-        <button
-          className={styles.nextbtn}
-          onClick={() => {
-            gotoeduc();
-          }}
-        >
-          {" "}
-          {prop.text6}
-        </button>
-      </div>
     </React.Fragment>
   );
 }
 
 export default Signupdetailcard;
-
-{
-  /* <div className={styles.outerbox}>
-        <form>
-          <h1> Personal details</h1>
-          <div>
-            <div>
-              <label>Fname</label>
-              <input type="text" placeholder="Nmae.." name="" id="" />
-              <div>
-                <label>lname</label>
-                <input type="text" placeholder="lname.." name="" id="" />
-              </div>
-            </div>
-            <div>
-              <label>Mobile number</label>
-              <input type="text" placeholder="+234.." name="" id="" />
-              <div>
-                <input type="text" placeholder="080101010" name="" id="" />
-              </div>
-            </div>
-
-            <div>
-              <div>
-                <label>Current state</label>
-                <input type="text" placeholder="Lagos" name="" id="" />
-              </div>
-              <div>
-                <label>City</label>
-                <input type="text" placeholder="Apapa.." name="" id="" />
-              </div>
-            </div>
-          </div>
-        </form>
-      </div> */
-}

@@ -1,14 +1,18 @@
 //import React from 'react'
 
 //import Myapp from "../../Myapplication/Myapp";
+//import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Signupdetailcard from "../Signupdetailcard/Signupdetailcard";
+import Signupeducation from "../Signupeducation/Signupeducation";
+import Skill from "../Skillmodal/Skill";
 //import Myapp from "../../Myapplication/Myapp";
 
 const Signuppersondetail = () => {
   return (
     <div>
       <Signupdetailcard
-        text="Person Details"
+        text="Personal Details"
         fname="Ayo"
         text1="First Name"
         lname="David"
@@ -20,8 +24,14 @@ const Signuppersondetail = () => {
         state="Lagos"
         text5="city"
         city="Apapa"
-        text6="Next"
       />
+
+      <Signupeducation />
+      <Skill />
+      <button>
+        {" "}
+        <NavLink to="/resumejob">Next</NavLink>
+      </button>
 
       {/* <Myapp /> */}
     </div>

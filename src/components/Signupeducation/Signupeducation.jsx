@@ -1,63 +1,50 @@
 //import React from 'react'
 
-import { useNavigate } from "react-router-dom";
-import Signupdetailcard from "../Signupdetailcard/Signupdetailcard";
+//import { useNavigate } from "react-router-dom";
+import React from "react";
+//import Education from "../Education/Education";
+// import "../../Css/Persondet/Persondetail.css";
+//import styles from "../../Css/signupseducation/signupeducation.module.css";
+import styles from "../../Css/Signupdetail/Signupdetail.module.css";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { faXmark } from "@fortawesome/free-solid-svg-icons";
+//import { NavLink } from "react-router-dom";
 
 const Signupeducation = () => {
-  const navigate = useNavigate();
-  const gotoskill = () => {
-    navigate("/skill");
-  };
   return (
-    <div>
-      <Signupdetailcard
-        text="Education"
-        fname="University"
-        text1="University of Lagos"
-        lname="Course of study"
-        text2="Mechanical Engineer"
-        text4="Start year"
-        state="2019"
-        text5="End year"
-        city="2022"
-      />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        {" "}
-        <button
-          style={{
-            padding: "10px",
-            width: "180px",
-            fontSize: "1.8em",
-            textAlign: "center",
-            borderRadius: "3px",
-          }}
-        >
-          Previous
-        </button>
-        <button
-          onClick={() => {
-            gotoskill();
-          }}
-          style={{
-            padding: "10px",
-            width: "180px",
-            backgroundColor: " rgb(10, 103, 79)",
-            color: "white",
-            fontSize: "1.8em",
-            textAlign: "center",
-            borderRadius: "3px",
-          }}
-        >
-          Next
-        </button>
+    <React.Fragment>
+      <h1>Education</h1>
+      <div className={styles.outerbox}>
+        <form>
+          <div className={styles.formGroup}>
+            <div className={styles.inputGroup}>
+              <label>University</label>
+              <input
+                type="text"
+                placeholder="University of Lagos"
+                name=""
+                id=""
+              />
+            </div>
+            <div className={styles.inputGroup}>
+              <label>Course of study</label>
+              <input type="text" placeholder=" Mec eng" name="" id="" />
+            </div>
+          </div>
+
+          <div className={styles.formGroup}>
+            <div className={styles.inputGroup}>
+              <label>Start Year</label>
+              <input type="text" placeholder="2019" name="" id="" />
+            </div>
+            <div className={styles.inputGroup}>
+              <label>End Year</label>
+              <input type="text" placeholder="2022" name="" id="" />
+            </div>
+          </div>
+        </form>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 

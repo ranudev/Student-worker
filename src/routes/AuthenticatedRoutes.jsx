@@ -13,6 +13,7 @@ import Resume2 from "../Pages/Resumees/Resume2/Resume2";
 //import Header from "../components/Header/UnAuthenticatedHeader";
 
 import LayoutCmp from "../layoutcmp/LayoutCmp";
+import Resumejob from "../Pages/Resumees/Resumejob/Resume";
 const AuthenticatedRoutes = createBrowserRouter(
   createRoutesFromElements(
     <Route>
@@ -48,6 +49,15 @@ const AuthenticatedRoutes = createBrowserRouter(
           <LayoutCmp>
             {" "}
             <Resume2 />
+          </LayoutCmp>
+        }
+      />
+
+      <Route
+        path="/resumejob"
+        element={
+          <LayoutCmp>
+            <Resumejob />
           </LayoutCmp>
         }
       />
