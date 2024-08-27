@@ -94,11 +94,12 @@
 }
 .log {
   /* width: 308px; */
-  margin: 20px 0px 0px 30px;
+
   background-color: rgb(10, 103, 79);
   color: white;
-  padding: 2%;
+  padding: 5px 120px 5px 120px;
   border: none;
+  border-radius: 3px;
   font-size: 20px;
 }
 .account {
@@ -143,7 +144,7 @@ a {
   border: 0.1px solid rgba(0, 0, 0, 0.5);
 }
 
-input {
+.signupinp {
   width: 308px;
   height: 30px;
 }
@@ -187,6 +188,15 @@ input {
   font-size: 16px;
   color: black;
 }
-hr {
+.line1 {
   margin: auto;
+}
+.signupbtn {
+  margin: auto;
+  padding: 10px 0px 0px 10px;
+  font-size: 20px;
+}
+.navlink {
+  color: white;
+  text-decoration: none;
 }

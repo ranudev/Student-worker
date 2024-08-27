@@ -63,7 +63,7 @@ input {
   gap: 340px;
   display: flex;
 }
-.btn button {
+.prev {
   color: rgb(10, 103, 79);
   font-family: Roboto;
   font-size: 25px;

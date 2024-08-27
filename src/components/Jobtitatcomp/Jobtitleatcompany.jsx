@@ -2,11 +2,12 @@ import React from "react";
 //import Jobtitle from "../Jobtitle/Jobtitle";
 //import Header from "../Header/Header";
 import Styles from "../../Css/jobtitleatcompany/JobTitleatCompany.module.css";
-import location from "../../assets/Map.png";
-import Globe from "../../assets/Globe.png";
-import Money from "../../assets/Money.png";
-import Time from "../../assets/Time.png";
+// import location from "../../assets/Map.png";
+// import Globe from "../../assets/Globe.png";
+// import Money from "../../assets/Money.png";
+// import Time from "../../assets/Time.png";
 import { NavLink } from "react-router-dom";
+import Jobtitle from "../Jobtitle/Jobtitle";
 //import { NavLink } from "react-router-dom";
 
 function Jobtitleatcompany() {
@@ -14,36 +15,10 @@ function Jobtitleatcompany() {
     <React.Fragment>
       <hr />
       <p className={Styles.jobtitle}>Job Title at company</p>
-
-      <div className={Styles.lowerbox}>
-        <h5 className={Styles.h5}>Job Title</h5>
-        <p className={Styles.com}>company</p>
-
-        <div className={Styles.icones}>
-          <div>
-            <img src={location} alt="" />
-            <span className={Styles.iconees}>Location</span>
-            {/* <hr className="line" /> */}
-          </div>
-
-          <div>
-            <img src={Globe} alt="" />
-            <span className={Styles.iconees}>Remote</span>
-          </div>
-          <div>
-            <img src={Money} alt="" />
-            <span className={Styles.iconees}>N20,000/mo</span>
-          </div>
-          <div>
-            <img src={Time} alt="" />
-            <span className={Styles.iconees}>24HRS/week</span>
-          </div>
-        </div>
-
-        <div className={Styles.foots}>
-          <span>10days ago</span> <span>12 Applicants</span>
-        </div>
+      <div>
+        <Jobtitle />
       </div>
+
       <div className={Styles.lowestbox}>
         <p className={Styles.tit}>About company</p>
         <p>
@@ -74,3 +49,35 @@ function Jobtitleatcompany() {
 }
 
 export default Jobtitleatcompany;
+{
+  /* <div className={Styles.lowerbox}>
+        <h5 className={Styles.h5}>Job Title</h5>
+        <p className={Styles.com}>company</p>
+
+        <div className={Styles.icones}>
+          <div className={Styles.icon}>
+            <div>
+              <img src={location} alt="" />
+              <span>Location</span>
+            </div>
+
+            <div>
+              <img src={Globe} alt="" />
+              <span>Remote</span>
+            </div>
+            <div>
+              <img src={Money} alt="" />
+              <span>N20,000/mo</span>
+            </div>
+            <div>
+              <img src={Time} alt="" />
+              <span>24HRS/week</span>
+            </div>
+          </div>
+
+          <div className={Styles.foots}>
+            <span>10days ago</span> <span>12 Applicants</span>
+          </div>
+        </div>
+      </div> */
+}

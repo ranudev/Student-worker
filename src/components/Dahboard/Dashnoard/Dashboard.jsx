@@ -29,7 +29,7 @@ function Dashboard() {
       </div>
       <hr />
       <div className={style.btn}>
-        <button>Review Job Post</button>
+        <button className={style.jobpstbtn}>Review Job Post</button>
       </div>
       <Footer />
     </React.Fragment>

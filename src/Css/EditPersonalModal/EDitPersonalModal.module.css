@@ -1,0 +1,30 @@
+.Modalbox {
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+  background-color: white;
+}
+.outmodalbox {
+  background-color: rgb(229, 229, 229);
+
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.perdet {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  font-family: roboto;
+}
+.inpp {
+  font-size: 18px;
+  border-color: rgba(159, 125, 225, 0.5);
+  font-weight: 400;
+  color: black;
+  width: 326px;
+}

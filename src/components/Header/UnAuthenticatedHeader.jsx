@@ -52,9 +52,13 @@ export default function UnAuthenticatedHeader() {
           <ul>
             <li>About Us </li>
             <li>Contact Us</li>
-            <NavLink to="/login">
-              <button className={style.loginbtn}>Login</button>
-            </NavLink>
+
+            <button className={style.loginbtn}>
+              {" "}
+              <NavLink to="/login" className={style.login}>
+                Login{" "}
+              </NavLink>{" "}
+            </button>
           </ul>
         </div>
       </nav>

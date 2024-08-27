@@ -49,8 +49,8 @@ function Orgdet() {
           <FontAwesomeIcon icon={faCircle} />
         </div>
         <div className={style.btn}>
-          <button> Previous</button>
-          <button>Next</button>
+          <button className={style.prev}> Previous</button>
+          <button className={style.prev}>Next</button>
         </div>
         <div className={style.link}>
           <a> Skip</a>

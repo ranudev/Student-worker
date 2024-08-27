@@ -11,6 +11,7 @@ function Job() {
     <React.Fragment>
       {/* <Header /> */}
 
+      {/* filter */}
       <div className={style.inp}>
         <p className={style.title}>Title/Keyword/Text</p>
         <div className={style.input}>
@@ -31,8 +32,6 @@ function Job() {
           </div>
         </div>
       </div>
-      {/* filter */}
-
       {/* FILTER BOX */}
       <div className={style.job}>
         <div>
@@ -47,9 +46,9 @@ function Job() {
             <p>Narrow your results</p>
             <hr className={style.filline} />
             <div className={style.location}>
-              <label>Location:</label>
+              <label className={style.site}>Location:</label>
 
-              <select>
+              <select className={style.optgrp}>
                 <optgroup>
                   <option>All</option>
                   <option></option>
@@ -60,7 +59,9 @@ function Job() {
             </div>
 
             <div className={style.labe}>
-              <label htmlFor="">Job type:</label>
+              <label htmlFor="" className={style.site}>
+                Job type:
+              </label>
               <div className={style.check}>
                 <div
                   style={{

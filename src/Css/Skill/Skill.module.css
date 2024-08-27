@@ -6,9 +6,10 @@
 
   margin: auto;
 }
-h2 {
-  font-weight: 400;
+.skills {
+  font-weight: 500;
   text-align: center;
+  font-size: 25px;
   color: rgb(31, 19, 91);
 }
 
@@ -28,19 +29,20 @@ h2 {
 .prevbtn {
   padding: 10px;
   width: 180px;
-  background-color: rgb(10, 103, 79);
-  color: white;
-  font-size: 1.8em;
+  color: rgba(10, 103, 79, 1);
+  font-size: 18px;
+  font-weight: 400;
   text-align: center;
   border-radius: 3px;
-  border: none;
+  border: 0.5px solid rgba(10, 103, 79, 1);
 }
 .nxtbtn {
   padding: 10px;
   width: 180px;
   background-color: rgb(10, 103, 79);
   color: white;
-  font-size: 1.8em;
+  font-size: 18px;
+  font-weight: 400;
   text-align: center;
   border-radius: 3px;
   border: none;
@@ -64,4 +66,9 @@ input {
   font-size: 30px;
   color: rgba(159, 125, 225, 0.5);
   text-align: center;
+}
+.tex1 {
+  font-size: 18px;
+  color: black;
+  font-weight: 400;
 }

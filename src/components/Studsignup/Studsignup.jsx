@@ -45,7 +45,7 @@ const Studsignup = () => {
           <div className={style.studemp}>
             <span className={style.stud}>Student </span>
             <span className={style.emp}>Employer</span>
-            <hr />
+            <hr className={style.line1} />
           </div>
           <div className={style.googl}>Signup with Google</div>
           <div className={style.or}>
@@ -82,6 +82,7 @@ const Studsignup = () => {
                 name=""
                 placeholder="Machine"
                 onChange={psswrdHandler}
+                className={style.signupinp}
               />
             </div>
 
@@ -91,9 +92,13 @@ const Studsignup = () => {
               By Registering you are agree to our
               <NavLink>Terms and Condtions</NavLink>{" "}
             </p>
-            <button className={style.log} onClick={signupHandle}>
-              <NavLink to="/signuppersondetail">Signup</NavLink>
-            </button>
+            <div className={style.signupbtn}>
+              <button className={style.log} onClick={signupHandle}>
+                <NavLink to="/signuppersondetail" className={style.navlink}>
+                  Sign Up
+                </NavLink>
+              </button>
+            </div>
             <p className={style.account}>
               Already have an account? <NavLink to="/login">Login</NavLink>
             </p>

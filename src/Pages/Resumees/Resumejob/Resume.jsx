@@ -1,7 +1,7 @@
 import React from "react";
 import style from "../../../Css/Resumejob/Resumejob.module.css";
 import pencil from "../../../assets/pencil.png";
-import { NavLink } from "react-router-dom";
+
 //import Header3 from "../../Header/Header3/Header3";
 //import Footer from "../../../components/Footer/Footer";
 function Resumejob() {
@@ -15,7 +15,7 @@ function Resumejob() {
             This is the resume that the employer will see , make <br /> sure it
             is up to date
           </p>
-          <button>Confirm</button>
+          <button className={style.cnfrmbtn}>Confirm</button>
         </div>
       </div>
       <div className={style.resume}>
@@ -60,10 +60,7 @@ function Resumejob() {
         </div>
       </div>
       <div className={style.complete}>
-        <button>
-          {" "}
-          <NavLink to="/job"> Complete</NavLink>
-        </button>
+        <button> Complete</button>
       </div>
       {/* <Footer /> */}
     </React.Fragment>

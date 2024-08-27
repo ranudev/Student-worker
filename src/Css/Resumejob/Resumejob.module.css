@@ -25,7 +25,7 @@
 .Upperbox p {
   text-align: center;
 }
-button {
+.cnfrmbtn {
   width: 258px;
   height: 40px;
   border-radius: 3px;
@@ -53,10 +53,11 @@ button {
 }
 .intro {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: flex-start;
   gap: 0px;
   margin-top: 80px;
+  margin-left: -90px;
 }
 .intro h5 {
   color: rgba(0, 0, 0, 0.8);
@@ -81,7 +82,6 @@ button {
   line-height: 22px;
 }
 .box {
-  height: 496px;
   width: 860px;
   box-sizing: border-box;
   /* border: 0.5px solid rgba(0, 0, 0, 0.4); */
@@ -98,10 +98,11 @@ button {
 }
 .skills {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: flex-start;
-  gap: 70px;
+  gap: 0px;
   margin-top: 80px;
+  margin-left: -90px;
 }
 .skills p {
   margin-left: 26px;
@@ -119,23 +120,32 @@ strong {
   width: 20px;
   margin-left: 20px;
 }
-.pencil img {
-  margin-left: 0px;
-  height: 25px;
-}
+/* .pen {
+  color: rgba(52, 31, 151, 1);
+  font-size: 100%;
+} */
 .complete {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   color: white;
   border-radius: 3px;
-
-  padding: 90px;
 }
-.complete button {
+.cnfrmbtn {
   background-color: rgb(10, 103, 79);
   font-size: 25px;
   border-color: rgb(10, 103, 79);
   cursor: pointer;
+}
+.line {
+  margin: auto;
+  width: 800px;
+}
+.cmp {
+  background-color: rgb(10, 103, 79);
+  color: white;
+  padding: 15px 20px 10px 20px;
+  border: none;
+  margin-top: 20px;
+  font-size: 20px;
+  border-radius: 3px;
+  text-align: center;
 }

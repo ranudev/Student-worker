@@ -4,6 +4,7 @@ import Globe from "../../assets/Globe.png";
 import Money from "../../assets/Money.png";
 import Time from "../../assets/Time.png";
 import style from "../../Css/Jobtitle/Jobtitle.module.css";
+import { NavLink } from "react-router-dom";
 //import { NavLink } from "react-router-dom";
 function Jobtitle() {
   return (
@@ -39,7 +40,16 @@ function Jobtitle() {
             <p>10days ago</p>
             <p>12Applicants</p>
           </div>
-          <div className={style.det}>View Details</div>
+          <div className={style.det}>
+            {" "}
+            <NavLink
+              to="/jobtitleatcompany
+            "
+            >
+              {" "}
+              View Details
+            </NavLink>
+          </div>
         </div>
       </div>
     </React.Fragment>

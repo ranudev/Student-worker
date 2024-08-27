@@ -44,3 +44,6 @@ h1 {
   border: 1px solid;
   cursor: pointer;
 }
+.login {
+  text-decoration: none;
+}

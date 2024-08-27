@@ -19,7 +19,7 @@ function Login() {
             <div className={style.studemp}>
               <span className={style.stud}>Student </span>
               <span className={style.emp}>Employer</span>
-              <hr />
+              <hr className={style.line1} />
             </div>
             <div className={style.googl}>Login with Google</div>
             <div className={style.or}>
@@ -40,18 +40,27 @@ function Login() {
                 name=""
                 id=""
                 placeholder="ayodavid@gmail.com"
+                className={style.signupinp}
               />
             </div>
             <div className={style.label}>
               <label htmlFor="" className={style.lab}>
                 Password
               </label>
-              <input type="password" name="" id="" />
+              <input
+                type="password"
+                name=""
+                id=""
+                className={style.signupinp}
+              />
             </div>
             <Link href="" className={style.fgtpswd}>
               Forgot password?
             </Link>
-            <button className={style.log}>Login</button>
+            {/* <button className={style.log}>Login</button> */}
+            <div className={style.signupbtn}>
+              <button className={style.log}>Login</button>
+            </div>
             <p className={style.account}>
               Dont have an account? <NavLink to="/studsignup">Signup</NavLink>
             </p>

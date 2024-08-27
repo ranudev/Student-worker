@@ -13,13 +13,14 @@ import styles from "../../Css/Signupdetail/Signupdetail.module.css";
 const Signupeducation = () => {
   return (
     <React.Fragment>
-      <h1>Education</h1>
+      <h1 className={styles.header}>Education</h1>
       <div className={styles.outerbox}>
         <form>
           <div className={styles.formGroup}>
             <div className={styles.inputGroup}>
-              <label>University</label>
+              <label className={styles.tex1}>University</label>
               <input
+                className={styles.tex1}
                 type="text"
                 placeholder="University of Lagos"
                 name=""
@@ -27,19 +28,37 @@ const Signupeducation = () => {
               />
             </div>
             <div className={styles.inputGroup}>
-              <label>Course of study</label>
-              <input type="text" placeholder=" Mec eng" name="" id="" />
+              <label className={styles.tex1}>Course of study</label>
+              <input
+                className={styles.tex1}
+                type="text"
+                placeholder=" Mec eng"
+                name=""
+                id=""
+              />
             </div>
           </div>
 
           <div className={styles.formGroup}>
             <div className={styles.inputGroup}>
-              <label>Start Year</label>
-              <input type="text" placeholder="2019" name="" id="" />
+              <label className={styles.tex1}>Start Year</label>
+              <input
+                className={styles.tex1}
+                type="text"
+                placeholder="2019"
+                name=""
+                id=""
+              />
             </div>
             <div className={styles.inputGroup}>
-              <label>End Year</label>
-              <input type="text" placeholder="2022" name="" id="" />
+              <label className={styles.tex1}>End Year</label>
+              <input
+                className={styles.tex1}
+                type="text"
+                placeholder="2022"
+                name=""
+                id=""
+              />
             </div>
           </div>
         </form>
