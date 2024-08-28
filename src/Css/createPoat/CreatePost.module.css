@@ -1,17 +1,6 @@
-* {
-  font-family: Roboto;
-}
-
-.post {
-  text-align: center;
-  color: rgba(10, 103, 79, 1);
-  font-weight: 500;
-  font-size: 30px;
-}
-.longbx {
+.box {
   width: 617px;
-  height: 1250px;
-
+  padding: 30px 40px 20px 40px;
   margin: auto;
   border: 1px solid;
   border-color: rgba(159, 125, 225, 0.5);
@@ -20,37 +9,46 @@
   align-items: flex-start;
   justify-content: center;
 }
-.innerlongbx {
-  margin-left: 40px;
-}
-
-.type {
+.CreatePost {
+  text-align: center;
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: 500;
   color: rgba(10, 103, 79, 1);
-  font-size: 22px;
 }
-
-.jobttl {
-  color: black;
-  padding: 5px;
-  height: 37px;
-  border-radius: 5px;
-  margin-top: 4px;
-  font-size: x-large;
-  width: 33vw;
-  border: 1px solid;
-  border-color: rgba(159, 125, 225, 0.5);
-}
-.list {
+.jbnm {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  font-family: Roboto;
   font-size: 18px;
+  font-weight: 400;
+  color: rgba(10, 103, 79, 1);
+  padding: 10px 0px 0px 0px;
+  text-align: left;
 }
+.radiobuttons {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 5px 0px;
+}
+.label {
+  width: 533px;
+  border: 1px solid rgba(159, 125, 225, 0.5);
+  font-size: 18px;
 
-.res {
-  height: 25vh;
-  width: 34vw;
-  border: 1px solid;
-  border-color: rgba(159, 125, 225, 0.5);
+  font-weight: 400;
+
+  border-radius: 3px;
+  padding: 10px 0px 10px 10px;
 }
-.postbtn {
+.box1 {
+  border: 1px solid rgba(159, 125, 225, 0.5);
+  width: 531px;
+  padding: 10px 0px 10px 10px;
+  border-radius: 3px;
+}
+.nxtbtn {
   background-color: rgba(10, 103, 79, 1);
   color: white;
   border-radius: 2px;
@@ -58,4 +56,5 @@
   width: 200px;
   margin: 35px 170px;
   font-size: 35px;
+  border: none;
 }

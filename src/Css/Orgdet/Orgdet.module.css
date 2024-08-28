@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 90px;
+  padding: 80px 0px 20px 0px;
 }
 .header h3 {
   color: rgb(10, 103, 79);
@@ -16,19 +16,15 @@
 }
 
 .box {
-  position: absolute;
   width: 617px;
-  height: 478px;
+  padding: 40px 0px 40px 0px;
   box-sizing: border-box;
   border: 0.5px solid rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center; /* it center element on y-axis*/
   align-items: center; /* it center element on x-axis*/
-
+  margin: auto;
   flex-direction: column;
-  margin-top: 30px;
-  margin-left: 32%;
-  margin-bottom: 50px;
 }
 
 .box div {
@@ -36,8 +32,6 @@
   justify-content: center; /* it center element on y-axis* /* it center element on x-axis*/
 
   flex-direction: column;
-
-  margin-top: 20px;
 }
 
 label {
@@ -47,8 +41,13 @@ label {
   font-weight: 400;
   line-height: 30px;
 }
-input {
+.orginp {
   width: 500px;
+  padding: 10px 0px 10px 10px;
+  border: 1px solid rgba(159, 125, 225, 0.5);
+  color: (61, 61, 61, 1);
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .lower {
@@ -57,7 +56,6 @@ input {
   align-items: center; /* it center element on x-axis*/
 
   flex-direction: column;
-  margin-top: 35%;
 }
 .btn {
   gap: 340px;
@@ -73,6 +71,7 @@ input {
   text-align: center;
   width: 150px;
   padding: 2%;
+  border: none;
 }
 .btn :first-child {
   margin-left: 4%;
@@ -81,4 +80,7 @@ input {
 .btn :nth-child(2) {
   background-color: rgb(10, 103, 79);
   color: white;
+}
+.lebinp div {
+  padding: 10px 0px 10px 0px;
 }

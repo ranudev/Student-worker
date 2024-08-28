@@ -1,13 +1,13 @@
 import React from "react";
 import style from "../../../Css/Resume/Resume.module.css";
 
-import Footer from "../../../components/Footer/Footer";
-import Header2 from "../../Header/Header2/Header2";
+//import Footer from "../../../components/Footer/Footer";
+//import Header2 from "../../Header/Header2/Header2";
 
 function Resume() {
   return (
     <React.Fragment>
-      <Header2 />
+      {/* <Header2 /> */}
       <hr />
       <div className={style.resume}>
         <h4>Resume</h4>
@@ -52,7 +52,7 @@ function Resume() {
           <a> Reject Applicant</a>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </React.Fragment>
   );
 }

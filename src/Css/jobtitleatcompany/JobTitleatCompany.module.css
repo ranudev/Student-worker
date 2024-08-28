@@ -7,46 +7,21 @@
 }
 
 .lowerbox {
-  height: 30vh;
-  width: 80vw;
+  width: 956px;
   background-color: rgb(255, 255, 255);
   border: 0.5px solid;
   border-color: rgba(0, 0, 0, 0.4);
   margin: auto;
-}
-.icones {
-  display: flex;
-  margin-top: 40px;
-  gap: 80px;
-  margin-left: 30px;
-  align-items: flex-start;
-}
-
-.h5 {
-  margin-left: 20px;
-  font-size: 1.3em;
-}
-
-.com {
-  margin-left: 30px;
-  font-size: 20px;
-}
-
-.foots {
-  margin-left: 27px;
-  margin-top: 20px;
-}
-
-.iconees {
-  margin-left: 12px;
+  padding: 0px 10px 0px 30px;
 }
 
 .lowestbox {
-  height: 95vh;
-  width: 80vw;
+  /* height: 95vh; */
+  width: 956px;
   background-color: rgb(255, 255, 255);
   border: 0.5px solid;
   border-color: rgba(0, 0, 0, 0.4);
+  padding: 0px 10px 0px 0px;
   margin: auto;
 }
 .tit {
@@ -56,8 +31,12 @@
   font-weight: 400;
   line-height: 23.44px;
   margin-top: 50px;
-  padding: 3px;
+  padding: 0px;
   margin-left: 40px;
+}
+.tit p {
+  font-size: 17px;
+  font-weight: 400;
 }
 
 /* .tit + p {
@@ -74,8 +53,70 @@
   margin: 0 auto;
   margin-top: 30px;
 }
+.jbtit {
+  color: rgba(10, 103, 79, 1);
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+
+  text-align: left;
+}
+.cmp {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+}
+.title {
+  padding: 10px 0px 10px 10px;
+}
 .icon {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+
+.icon div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px 0px 10px;
+}
+.icon span,
+img {
+  padding: 5px;
+
+  color: rgba(10, 103, 79, 1);
+}
+.line {
+  width: 100px;
+
+  margin: 10px 0px 0px 15px;
+  height: 1px;
+}
+.foot {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app {
+  display: flex;
+  padding: 10px 0px 20px 10px;
+  gap: 10px;
+  color: black;
+}
+.text {
+  font-size: large;
+}
+.icon span {
+  color: black;
+}
+.Apply {
+  background-color: rgba(10, 103, 79, 1);
+  color: white;
+  padding: 10px 100px 10px 100px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
 }
