@@ -11,10 +11,10 @@ import Skill from "../components/Skillmodal/Skill";
 //import Studsignup from "../components/Studsignup/Studsignup";
 //import Resume2 from "../Pages/Resumees/ResumeCmp/ResumeCmp";
 //import Header from "../components/Header/UnAuthenticatedHeader";
-
+import Resumejob from "../Pages/Resumees/Resumejob/ResumeJob";
 import LayoutCmp from "../layoutcmp/LayoutCmp";
 //import ResumeCmp from "../Pages/Resumees/ResumeCmp/ResumeCmp";
-import Resumejob from "../Pages/Resumees/Resumejob/Resume";
+
 import Job from "../components/Job/Job";
 //import Jobtitleatcompany from "../components/Jobtitatcomp/Jobtitleatcompany";
 //import Resumejob from "../Pages/Resumees/Resumejob/Resume";
@@ -57,14 +57,14 @@ const AuthenticatedRoutes = createBrowserRouter(
           </LayoutCmp>
         }
       />
-      <Route
+      {/* <Route
         path="/jobtest"
         element={
           <LayoutCmp>
-            <Resumejob />
+            <Res
           </LayoutCmp>
         }
-      />
+      /> */}
       {/* <Route
         path="jobtitleatcompany"
         element={

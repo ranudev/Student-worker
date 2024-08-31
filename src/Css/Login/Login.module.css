@@ -97,7 +97,7 @@
 }
 .fgtpswd {
   color: rgb(95, 39, 205);
-  margin: 0px 0px 0px 200px;
+  margin: 0px 0px 0px 180px;
   font-size: 18px;
   text-decoration: none;
 }
@@ -178,5 +178,6 @@ a {
 .signupbtn {
   margin: auto;
   padding: 10px 0px 0px 10px;
-  font-size: 20px;
+  font-size: 5px;
+  color: black;
 }
