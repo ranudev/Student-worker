@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import style from "../../Css/Login/Login.module.css";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import UserProvider from "../../Context/userProvider";
 
 function Login() {
   const navigate = useNavigate();
@@ -8,6 +9,7 @@ function Login() {
     email: "",
     password: "",
   });
+  const { setLogin } = useContext(UserProvider);
 
   const emailHandler = (event) => {
     setInput({ ...input, [event.target.name]: event.target.value });
@@ -20,7 +22,11 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const loggeduser = JSON.parse(localStorage.getItem("user"));
-    if (input.email === loggeduser.email && loggeduser.password) {
+    if (
+      input.email === loggeduser.email &&
+      input.password === loggeduser.password
+    ) {
+      setLogin(true);
       navigate("/");
     } else {
       alert("wrong mail & password");

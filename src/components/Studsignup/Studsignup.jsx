@@ -1,8 +1,9 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import style from "../../Css/Studsignup/Studsignup.module.css";
 import { useState } from "react";
 
 const Studsignup = () => {
+  const navigate = useNavigate();
   const [input, setInput] = useState({
     email: "",
     password: "",
@@ -14,17 +15,22 @@ const Studsignup = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (input.email !== "") {
+    if (input.email !== "" && input.password != "") {
       const emailPattern = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
       if (!emailPattern.test(input.email)) {
         //test method is used to check pattern of mail[its a built-in method]
         setErr("Please enter a valid email");
+
         return;
+      }
+      if (input.password.length <= 6) {
+        setErr("Please enter minimum 6 character paswword");
       }
 
       setMsg("Valid email");
       setErr("");
       localStorage.setItem("user", JSON.stringify(input));
+      navigate("/signuppersondetail");
     } else {
       setErr("Enter a valid email");
     }
@@ -114,6 +120,11 @@ const Studsignup = () => {
                 value={input.password}
               />
             </div>
+            {err && (
+              <p style={{ color: "red", fontSize: "20px", marginTop: "10px" }}>
+                {err}
+              </p>
+            )}
 
             <p className={style.char}>Minimum 6 Character</p>
 

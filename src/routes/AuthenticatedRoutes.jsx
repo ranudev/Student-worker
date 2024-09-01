@@ -16,12 +16,14 @@ import LayoutCmp from "../layoutcmp/LayoutCmp";
 //import ResumeCmp from "../Pages/Resumees/ResumeCmp/ResumeCmp";
 
 import Job from "../components/Job/Job";
+
 //import Jobtitleatcompany from "../components/Jobtitatcomp/Jobtitleatcompany";
 //import Resumejob from "../Pages/Resumees/Resumejob/Resume";
 const AuthenticatedRoutes = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route path="/job" element={<Job />} />
+
       <Route
         path="/signuppersondetail"
         element={

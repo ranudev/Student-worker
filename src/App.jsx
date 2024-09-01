@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+//import { useState } from "react";
 import "./App.css";
 
 import UnAuthenticatedRoutes from "./routes/UnAuthenticatedRoutes";
@@ -6,16 +6,16 @@ import UnAuthenticatedRoutes from "./routes/UnAuthenticatedRoutes";
 import { RouterProvider } from "react-router-dom";
 import AuthenticatedRoutes from "./routes/AuthenticatedRoutes";
 
-//import EditPersonalModal from "./components/EditpersonalModal/EditPersonalModal";
+import UserProvider from "../../Context/userProvider";
 
 function App() {
-  const [isLoggedin, setIsLoggedIn] = useState(false);
-
   return (
     <>
-      <RouterProvider
-        router={isLoggedin ? AuthenticatedRoutes : UnAuthenticatedRoutes}
-      />
+      <UserProvider value={{ login }}>
+        <RouterProvider
+          router={login ? AuthenticatedRoutes : UnAuthenticatedRoutes}
+        />
+      </UserProvider>
     </>
   );
 }
