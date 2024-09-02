@@ -1,6 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import style from "../../Css/Studsignup/Studsignup.module.css";
 import { useState } from "react";
+import { emailPattern } from "../../Utilities/Utils";
 
 const Studsignup = () => {
   const navigate = useNavigate();
@@ -9,30 +10,33 @@ const Studsignup = () => {
     password: "",
   });
 
-  const [err, setErr] = useState("");
+  const [emailerr, setemailErr] = useState("");
+  const [passworderr, setPasswordErr] = useState("");
   const [msg, setMsg] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     if (input.email !== "" && input.password != "") {
-      const emailPattern = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
       if (!emailPattern.test(input.email)) {
         //test method is used to check pattern of mail[its a built-in method]
-        setErr("Please enter a valid email");
+        setemailErr("Please enter a valid email");
 
         return;
       }
-      if (input.password.length <= 6) {
-        setErr("Please enter minimum 6 character paswword");
+      if (input.password.length < 5) {
+        setPasswordErr("Please enter minimum 6 character password");
       }
 
-      setMsg("Valid email");
-      setErr("");
+      setemailErr("");
+      setPasswordErr("");
       localStorage.setItem("user", JSON.stringify(input));
+
+      setMsg("Form submitted succesfully");
       navigate("/signuppersondetail");
     } else {
-      setErr("Enter a valid email");
+      setemailErr("Emai is resquired");
+      setPasswordErr("Password is required");
     }
   };
 
@@ -40,15 +44,15 @@ const Studsignup = () => {
     const value = event.target.value;
     setInput({ ...input, email: value });
 
-    const emailPattern = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
     if (!emailPattern.test(value)) {
-      setErr("Please enter a valid email");
+      setemailErr("Please enter a valid email");
     } else {
-      setErr("");
+      setemailErr("");
+      setPasswordErr("");
     }
   };
 
-  const psswrdHandler = (event) => {
+  const passwordHandler = (event) => {
     const value = event.target.value;
     setInput({ ...input, password: value });
   };
@@ -91,12 +95,13 @@ const Studsignup = () => {
                 name="email"
                 placeholder="ayodavid@gmail.com"
                 onChange={emailHandler}
+                className={style.signupinp}
                 value={input.email}
               />
             </div>
-            {err && (
+            {emailerr && (
               <p style={{ color: "red", fontSize: "20px", marginTop: "10px" }}>
-                {err}
+                {emailerr}
               </p>
             )}
             {msg && (
@@ -115,14 +120,14 @@ const Studsignup = () => {
                 type="password"
                 name="password"
                 placeholder="Machine"
-                onChange={psswrdHandler}
+                onChange={passwordHandler}
                 className={style.signupinp}
                 value={input.password}
               />
             </div>
-            {err && (
+            {passworderr && (
               <p style={{ color: "red", fontSize: "20px", marginTop: "10px" }}>
-                {err}
+                {passworderr}
               </p>
             )}
 
@@ -137,6 +142,14 @@ const Studsignup = () => {
                 Sign Up
               </button>
             </div>
+            {msg && (
+              <P
+                style={{ fontSize: "10px ", color: "green", marginTop: "10px" }}
+              >
+                {" "}
+                {msg}
+              </P>
+            )}
             <p className={style.account}>
               Already have an account? <NavLink to="/login">Login</NavLink>
             </p>

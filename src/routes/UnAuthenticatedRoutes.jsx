@@ -13,7 +13,6 @@ import Studsignup from "../components/Studsignup/Studsignup";
 import Login from "../components/Login/Login";
 import Jobtitleatcompany from "../components/Jobtitatcomp/Jobtitleatcompany";
 // import Resumejob from "../Pages/Resumees/Resumejob/Resume";
-// import Signuppersondetail from "../components/Signuppersondetail/Signuppersondetail";
 import LayoutCmp from "../layoutcmp/LayoutCmp";
 
 const UnAuthenticatedRoutes = createBrowserRouter(

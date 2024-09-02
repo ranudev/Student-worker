@@ -54,7 +54,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-input {
+.uiuxtext {
   text-align: left;
 
   border-color: rgba(0, 0, 0, 0.5);
@@ -131,5 +131,5 @@ input {
   margin-top: 22px;
   text-align: center;
   margin-right: 30.5%;
-  font-weight: 450;
+  font-weight: 400;
 }

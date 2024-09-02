@@ -52,13 +52,13 @@ label {
   font-weight: 300;
 }
 
-input {
+/* input {
   border: 1px solid rgba(159, 125, 225, 0.5);
   border-radius: 3px;
-  font-size: 30px;
+  font-size: 20px;
   width: 95%;
   padding: 10px;
-}
+} */
 ::placeholder {
   color: black;
 }

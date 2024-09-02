@@ -29,7 +29,11 @@ const Home = () => {
       <div>
         <p className={style.keywrd}>Title/Keyword/Category</p>
         <div className={style.inp}>
-          <input type="text" placeholder="ui/ux Design" />
+          <input
+            className={style.uiuxtext}
+            type="text"
+            placeholder="ui/ux Design"
+          />
 
           <div className={style.srchicon}>
             <img src={Search} alt="" />

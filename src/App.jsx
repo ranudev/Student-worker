@@ -6,12 +6,14 @@ import UnAuthenticatedRoutes from "./routes/UnAuthenticatedRoutes";
 import { RouterProvider } from "react-router-dom";
 import AuthenticatedRoutes from "./routes/AuthenticatedRoutes";
 
-import UserProvider from "../../Context/userProvider";
+import { useContext } from "react";
+import UserContext, { UserProvider } from "./Context/UserContext";
 
 function App() {
+  const { login } = useContext(UserContext);
   return (
     <>
-      <UserProvider value={{ login }}>
+      <UserProvider>
         <RouterProvider
           router={login ? AuthenticatedRoutes : UnAuthenticatedRoutes}
         />

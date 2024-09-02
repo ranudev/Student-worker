@@ -81,7 +81,7 @@
 
   background-color: rgb(10, 103, 79);
   color: white;
-  padding: 5px 120px 5px 120px;
+  padding: 5px 140px 5px 120px;
   border: none;
   border-radius: 3px;
   font-size: 20px;
@@ -136,7 +136,7 @@ a {
 
 .signupinp {
   width: 308px;
-  height: 40px;
+  /* padding: 5px 5px 5px 5px; */
   border-color: 0.5px solid blueviolet;
 }
 

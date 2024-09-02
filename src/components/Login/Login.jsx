@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import style from "../../Css/Login/Login.module.css";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import UserProvider from "../../Context/userProvider";
+import UserContext from "../../Context/UserContext";
 
 function Login() {
   const navigate = useNavigate();
@@ -9,7 +9,9 @@ function Login() {
     email: "",
     password: "",
   });
-  const { setLogin } = useContext(UserProvider);
+  const [err, setErr] = useState("");
+
+  const { setLogin } = useContext(UserContext);
 
   const emailHandler = (event) => {
     setInput({ ...input, [event.target.name]: event.target.value });
@@ -28,8 +30,14 @@ function Login() {
     ) {
       setLogin(true);
       navigate("/");
+    }
+    if (
+      input.email !== loggeduser.email &&
+      input.password !== loggeduser.password
+    ) {
+      setLogin(false);
     } else {
-      alert("wrong mail & password");
+      setErr("your credentials are not matched");
     }
   };
 
@@ -94,6 +102,20 @@ function Login() {
                 </button>
               </div>
             </form>
+
+            {err && (
+              <p
+                style={{
+                  color: "red",
+                  fontSize: "20px",
+                  marginTop: "10px",
+                  marginLeft: "20px",
+                  fontWeight: "300",
+                }}
+              >
+                {err}
+              </p>
+            )}
             <Link to="#" className={style.fgtpswd}>
               Forgot password?
             </Link>
