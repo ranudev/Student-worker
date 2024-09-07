@@ -11,13 +11,19 @@ import UserContext, { UserProvider } from "./Context/UserContext";
 
 function App() {
   const { login } = useContext(UserContext);
+
+  console.log("login status:", login);
+  console.log(
+    "Router:",
+    login ? "AuthenticatedRoutes" : "UnAuthenticatedRoutes"
+  );
+
   return (
     <>
-      <UserProvider>
-        <RouterProvider
-          router={login ? AuthenticatedRoutes : UnAuthenticatedRoutes}
-        />
-      </UserProvider>
+      <RouterProvider
+        key={login}
+        router={login ? AuthenticatedRoutes() : UnAuthenticatedRoutes}
+      />
     </>
   );
 }

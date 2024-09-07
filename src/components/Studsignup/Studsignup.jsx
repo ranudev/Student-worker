@@ -1,7 +1,8 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import style from "../../Css/Studsignup/Studsignup.module.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { emailPattern } from "../../Utilities/Utils";
+import UserContext from "../../Context/UserContext";
 
 const Studsignup = () => {
   const navigate = useNavigate();
@@ -10,12 +11,15 @@ const Studsignup = () => {
     password: "",
   });
 
+  const { setLogin } = useContext(UserContext);
   const [emailerr, setemailErr] = useState("");
   const [passworderr, setPasswordErr] = useState("");
   const [msg, setMsg] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setemailErr("");
+    setPasswordErr("");
 
     if (input.email !== "" && input.password != "") {
       if (!emailPattern.test(input.email)) {
@@ -24,19 +28,19 @@ const Studsignup = () => {
 
         return;
       }
-      if (input.password.length < 5) {
-        setPasswordErr("Please enter minimum 6 character password");
+      if (input.password.length <= 5) {
+        setPasswordErr("Please enter minimum 5 character password");
+        return;
       }
 
-      setemailErr("");
-      setPasswordErr("");
       localStorage.setItem("user", JSON.stringify(input));
 
       setMsg("Form submitted succesfully");
+      setLogin(true);
       navigate("/signuppersondetail");
     } else {
-      setemailErr("Emai is resquired");
-      setPasswordErr("Password is required");
+      if (input.email === "") setemailErr("Email is required");
+      if (input.password === "") setPasswordErr("Password is required");
     }
   };
 
