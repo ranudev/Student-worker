@@ -5,9 +5,9 @@ function Footer2() {
   return (
     <React.Fragment>
       <div className={style.footer}>
-        <p>
+        <h3 className={style.worker}>
           StudentWorker <span>@ 2024</span>{" "}
-        </p>
+        </h3>
 
         <p>About</p>
         <p>Privacy</p>

@@ -11,13 +11,17 @@ function Signupdetailcard(prop) {
         <form>
           <div className={styles.formGroup}>
             <div className={styles.inputGroup}>
-              <label className={styles.tex1}>{prop.tex1}</label>
+              <label className={styles.tex1}>{prop.text}</label>
               <input
                 type="text"
                 className={styles.tex1}
                 placeholder={prop.fname}
                 name=""
                 id=""
+                onChange={(event) => {
+                  console.log("here.", event);
+                  prop.setPersonalDetail(event.target.value);
+                }}
               />
             </div>
             <div className={styles.inputGroup}>
@@ -28,6 +32,10 @@ function Signupdetailcard(prop) {
                 placeholder={prop.lname}
                 name=""
                 id=""
+                onChange={(event) => {
+                  console.log("here.", event);
+                  prop.setPersonalDetail(event.target.value);
+                }}
               />
             </div>
           </div>
@@ -35,11 +43,15 @@ function Signupdetailcard(prop) {
             <div className={styles.inputGroupSmall}>
               <label className={styles.tex1}>{prop.text3}</label>
               <input
-                type="text"
+                type="number"
                 className={styles.tex}
                 placeholder={prop.num}
                 name=""
                 id=""
+                onChange={(event) => {
+                  console.log("here.", event);
+                  prop.setPersonalDetail(event.target.value);
+                }}
               />
             </div>
             <div className={styles.inputGroupLarge}>
@@ -49,13 +61,26 @@ function Signupdetailcard(prop) {
                 placeholder={prop.num1}
                 name=""
                 id=""
+                onChange={(event) => {
+                  console.log("here.", event);
+                  prop.setPersonalDetail(event.target.value);
+                }}
               />
             </div>
           </div>
           <div className={styles.formGroup}>
             <div className={styles.inputGroup}>
               <label className={styles.tex1}>{prop.text4}</label>
-              <input type="text" placeholder={prop.state} name="" id="" />
+              <input
+                type="text"
+                placeholder={prop.state}
+                name=""
+                id=""
+                onChange={(event) => {
+                  console.log("here.", event);
+                  prop.setPersonalDetail(event.target.value);
+                }}
+              />
             </div>
             <div className={styles.inputGroup}>
               <label className={styles.tex1}>{prop.text5}</label>
@@ -65,6 +90,10 @@ function Signupdetailcard(prop) {
                 placeholder={prop.city}
                 name=""
                 id=""
+                onChange={(event) => {
+                  console.log("here.", event);
+                  prop.setPersonalDetail(event.target.value);
+                }}
               />
             </div>
           </div>
@@ -75,39 +104,3 @@ function Signupdetailcard(prop) {
 }
 
 export default Signupdetailcard;
-
-{
-  /* <div className={styles.outerbox}>
-        <form>
-          <h1> Personal details</h1>
-          <div>
-            <div>
-              <label>Fname</label>
-              <input type="text" placeholder="Nmae.." name="" id="" />
-              <div>
-                <label>lname</label>
-                <input type="text" placeholder="lname.." name="" id="" />
-              </div>
-            </div>
-            <div>
-              <label>Mobile number</label>
-              <input type="text" placeholder="+234.." name="" id="" />
-              <div>
-                <input type="text" placeholder="080101010" name="" id="" />
-              </div>
-            </div>
-
-            <div>
-              <div>
-                <label>Current state</label>
-                <input type="text" placeholder="Lagos" name="" id="" />
-              </div>
-              <div>
-                <label>City</label>
-                <input type="text" placeholder="Apapa.." name="" id="" />
-              </div>
-            </div>
-          </div>
-        </form>
-      </div> */
-}

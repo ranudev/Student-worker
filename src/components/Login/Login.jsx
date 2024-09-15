@@ -22,22 +22,56 @@ function Login() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    const loggeduser = JSON.parse(localStorage.getItem("user"));
-    if (
-      input.email === loggeduser.email &&
-      input.password === loggeduser.password
-    ) {
-      setLogin(true);
-      navigate("/");
-    }
-    if (
-      input.email !== loggeduser.email &&
-      input.password !== loggeduser.password
-    ) {
-      setLogin(false);
-    } else {
-      setErr("your credentials are not matched");
+    {
+      e.preventDefault();
+      // const loggeduser = JSON.parse(localStorage.getItem("user"));
+      // if (
+      //   input.email === loggeduser.email &&
+      //   input.password === loggeduser.password
+      // ) {
+      //   setLogin(true);
+      //   navigate("/");
+      // }
+      // if (
+      //   input.email !== loggeduser.email &&
+      //   input.password !== loggeduser.password
+      // ) {
+      //   setLogin(false);
+      // } else {
+      //   setErr("your credentials are not matched");
+      // }
+      /********************fetch method ****************************/
+
+      fetch(" http://localhost:3000/api/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json", // Specify JSON content type
+        },
+        body: JSON.stringify({
+          username: input.email,
+          password: input.password,
+        }),
+      })
+        .then((res) => {
+          if (!res.ok) {
+            return res.json().then((error) => {
+              throw new Error(error.message || "Something went wrong");
+            });
+          }
+          return res.json();
+        })
+        .then((data) => {
+          if (data) {
+            localStorage.setItem("user", JSON.stringify(input));
+
+            setLogin(true);
+            navigate("/signuppersondetail");
+          }
+        })
+        .catch((err) => {
+          console.error("Error:", err.message);
+          setErr(`Error: ${err.message}`);
+        });
     }
   };
 
@@ -55,11 +89,6 @@ function Login() {
 
         <div className={style.body}>
           <div className={style.form}>
-            <div className={style.studemp}>
-              <span className={style.stud}>Student </span>
-              <span className={style.emp}>Employer</span>
-              <hr className={style.line1} />
-            </div>
             <div className={style.googl}>Login with Google</div>
             <div className={style.or}>
               <span>

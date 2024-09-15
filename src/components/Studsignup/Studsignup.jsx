@@ -15,32 +15,74 @@ const Studsignup = () => {
   const [emailerr, setemailErr] = useState("");
   const [passworderr, setPasswordErr] = useState("");
   const [msg, setMsg] = useState("");
+  const [err, setErr] = useState("");
+  const [selectUser, setSelectUser] = useState("student");
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    setemailErr("");
-    setPasswordErr("");
+    {
+      event.preventDefault();
+      // setemailErr("");
+      // setPasswordErr("");
 
-    if (input.email !== "" && input.password != "") {
-      if (!emailPattern.test(input.email)) {
-        //test method is used to check pattern of mail[its a built-in method]
-        setemailErr("Please enter a valid email");
+      // if (input.email !== "" && input.password != "") {
+      //   if (!emailPattern.test(input.email)) {
+      //     //test method is used to check pattern of mail[its a built-in method]
+      //     setemailErr("Please enter a valid email");
 
-        return;
-      }
-      if (input.password.length <= 5) {
-        setPasswordErr("Please enter minimum 5 character password");
-        return;
-      }
+      //     return;
+      //   }
+      //   if (input.password.length <= 5) {
+      //     setPasswordErr("Please enter minimum 5 character password");
+      //     return;
+      //   }
 
-      localStorage.setItem("user", JSON.stringify(input));
+      //   const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
 
-      setMsg("Form submitted succesfully");
-      setLogin(true);
-      navigate("/signuppersondetail");
-    } else {
-      if (input.email === "") setemailErr("Email is required");
-      if (input.password === "") setPasswordErr("Password is required");
+      //   existingUsers.push(input);
+
+      //   localStorage.setItem("users", JSON.stringify(existingUsers));
+
+      //   setMsg("Form submitted succesfully");
+      //   setLogin(true);
+      //   navigate("/signuppersondetail");
+      // } else {
+      //   if (input.email === "") setemailErr("Email is required");
+      //   if (input.password === "") setPasswordErr("Password is required");
+      // }
+
+      /*************************fetch*************************/
+
+      fetch("http://localhost:3000/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json", // Specify JSON content type
+        },
+        body: JSON.stringify({
+          username: input.email,
+          password: input.password,
+          userType: "Student",
+        }),
+      })
+        .then((res) => {
+          if (!res.ok) {
+            return res.json().then((error) => {
+              throw new Error(error.message || "Something went wrong");
+            });
+          }
+          return res.json();
+        })
+        .then((data) => {
+          if (data) {
+            localStorage.setItem("user", JSON.stringify(input));
+            setMsg("Form submitted successfully");
+            setLogin(true);
+            navigate("/signuppersondetail");
+          }
+        })
+        .catch((err) => {
+          console.error("Error:", err.message);
+          setErr(`Error: ${err.message}`);
+        });
     }
   };
 
@@ -60,6 +102,9 @@ const Studsignup = () => {
     const value = event.target.value;
     setInput({ ...input, password: value });
   };
+  const selectUserHandler = (user) => {
+    setSelectUser(user);
+  };
 
   return (
     <div className={style.color}>
@@ -75,8 +120,26 @@ const Studsignup = () => {
       <div className={style.body}>
         <div className={style.form}>
           <div className={style.studemp}>
-            <span className={style.stud}>Student </span>
-            <span className={style.emp}>Employer</span>
+            <span
+              className={style.stud}
+              onClick={() => selectUserHandler("student")}
+              style={{
+                color: selectUser == "student" ? " rgb(95, 39, 205)" : "grey",
+                cursor: "pointer",
+              }}
+            >
+              Student{" "}
+            </span>
+            <span
+              onClick={() => selectUserHandler("employer")}
+              className={style.emp}
+              style={{
+                color: selectUser == "employer" ? " rgb(95, 39, 205)" : "grey",
+                cursor: "pointer",
+              }}
+            >
+              Employer
+            </span>
             <hr className={style.line1} />
           </div>
           <div className={style.googl}>Signup with Google</div>
@@ -147,16 +210,23 @@ const Studsignup = () => {
               </button>
             </div>
             {msg && (
-              <P
+              <p
                 style={{ fontSize: "10px ", color: "green", marginTop: "10px" }}
               >
                 {" "}
                 {msg}
-              </P>
+              </p>
             )}
             <p className={style.account}>
               Already have an account? <NavLink to="/login">Login</NavLink>
             </p>
+            {err && (
+              <p
+                style={{ fontSize: "10px ", color: "green", marginTop: "10px" }}
+              >
+                {err}
+              </p>
+            )}
           </form>
         </div>
       </div>

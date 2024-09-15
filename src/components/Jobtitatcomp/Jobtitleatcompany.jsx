@@ -1,85 +1,80 @@
 import React from "react";
-//import Jobtitle from "../Jobtitle/Jobtitle";
+//import JobCard from "../JobCard/JobCard";
 //import Header from "../Header/Header";
 import Styles from "../../Css/jobtitleatcompany/JobTitleatCompany.module.css";
 import location from "../../assets/Map.png";
 import Globe from "../../assets/Globe.png";
 import Money from "../../assets/Money.png";
 import Time from "../../assets/Time.png";
+import { useLocation } from "react-router-dom";
 // import { NavLink } from "react-router-dom";
 //import { NavLink } from "react-router-dom";
 
 function Jobtitleatcompany() {
+  const location = useLocation();
+  const item = location.state;
   return (
     <React.Fragment>
       <hr />
-      <p className={Styles.jobtitle}>Job Title at company</p>
+      <p className={Styles.JobCard}>
+        {item.jobTitle} at {item.companyName}
+      </p>
 
       <div className={Styles.lowerbox}>
         <div className={Styles.title}>
-          <h2 className={Styles.jbtit}>Job Title</h2>
-          <p className={Styles.cmp}>Company</p>
+          <h2 className={Styles.jbtit}>{item.jobTitle}</h2>
+          <p className={Styles.cmp}>{item.companyName}</p>
         </div>
         <div className={Styles.icon}>
           <div>
             <img src={location} alt="" />
-            <span className={Styles.text}>Location</span>
+            <span className={Styles.text}>{item.state}</span>
           </div>
 
           <div>
             <img src={Globe} alt="" />
-            <span className={Styles.text}>Remote</span>
+            <span className={Styles.text}>{item.location}</span>
           </div>
           <div>
             <img src={Money} alt="" />
-            <span className={Styles.text}>N20,000/mo</span>
+            <span className={Styles.text}>{item.salary}</span>
           </div>
           <div>
             <img src={Time} alt="" />
-            <span className={Styles.text}>24hrs/Week</span>
+            <span className={Styles.text}>{item.workingHours}</span>
           </div>
         </div>
         <hr className={Styles.line} />
         <div className={Styles.foot}>
           <div className={Styles.app}>
             <p>10days ago</p>
-            <p>12 Applicants</p>
-          </div>
-          <div className={Styles.det}>
-            {" "}
-            {/* <NavLink
-              to="/jobtitleatcompany
-            "
-            > */}{" "}
-            View Details
-            {/* </NavLink> */}
+            <p>Applicants</p>
           </div>
         </div>
       </div>
+
       <div className={Styles.lowestbox}>
-        <p className={Styles.tit}>About company</p>
-        <p>
-          Company is the fastest-growing authentic directory that takes pride in
-          connecting buyers and sellers across Nigeria and beyond. Our online
-          outlet provides you with an uninterrupted shopping experience
-        </p>
+        <div
+          style={{
+            marginLeft: "40px",
+          }}
+        >
+          <p className={Styles.tit}>About company</p>
+          <pre>{item.aboutCompany}</pre>
 
-        <p className={Styles.tit}>Responsibility of student</p>
-        <p>1.Prepare and develop tools</p>
-        <p>2.Lead the entire student team</p>
-        <p>3.Utilize backend stuff</p>
-        <p>4.Design and code electrothings</p>
-
-        <p className={Styles.tit}>Who can apply</p>
-        <p>Candidates who:</p>
-        <p>1.Are available for work for a duration of 3months</p>
-        <p>2.Can start work between June 20 and June 23 2021</p>
-        <p>3.Have relevant skills and interests</p>
-        <p>4.Can cook stew</p>
-
-        {/* <NavLink to="/resumejob"> */}
+          <p className={Styles.tit}>Responsibility of student</p>
+          <pre>{item.roleResponsibility}</pre>
+          <p className={Styles.tit}>Who can apply</p>
+          <p
+            style={{
+              fontSize: "16px",
+            }}
+          >
+            Candidates who:
+          </p>
+          <pre>{item.jobDescription}</pre>
+        </div>
         <button className={Styles.Apply}>Apply</button>
-        {/* </NavLink> */}
       </div>
     </React.Fragment>
   );

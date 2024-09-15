@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 //import Header from "../Header/Header";
 import Search from "../../assets/Search.png";
 import style from "../../Css/Job/Job.module.css";
 import filter from "../../assets/filter.png";
 import ilter from "../../assets/ilter.png";
 import Jobtitle from "../Jobtitle/Jobtitle";
+
 //import Footer from "../Footer/Footer";
 function Job() {
+  const [jobs, setJobs] = useState([]);
+
+  const fetchJobs = () => {
+    fetch("http://localhost:3000/jobs")
+      .then((res) => res.json())
+      .then((data) => {
+        setJobs(data);
+      });
+  };
+
+  useEffect(() => {
+    fetchJobs();
+  }, []);
   return (
     <React.Fragment>
       {/* <Header /> */}
@@ -83,10 +97,19 @@ function Job() {
         </div>
 
         <div className={style.jobttljob}>
-          <Jobtitle />
-          {/* <Jobtitle />
-          <Jobtitle />
-          <Jobtitle /> */}
+          <p
+            style={{
+              margin: "10px",
+              fontSize: "18px",
+            }}
+          >
+            {jobs.length}Jobs
+          </p>
+          {jobs.length == 0 ? (
+            <p> No posts yet </p>
+          ) : (
+            jobs.map((item) => <Jobtitle item={item} />)
+          )}
         </div>
       </div>
     </React.Fragment>

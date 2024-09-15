@@ -7,7 +7,6 @@ import {
 
 import Signupeducation from "../components/Signupeducation/Signupeducation";
 import Signuppersondetail from "../components/Signuppersondetail/Signuppersondetail";
-import Skill from "../components/Skillmodal/Skill";
 
 import Resumejob from "../Pages/Resumees/Resumejob/ResumeJob";
 import LayoutCmp from "../layoutcmp/LayoutCmp";
@@ -34,15 +33,6 @@ const AuthenticatedRoutes = () =>
           element={
             <LayoutCmp>
               <Signupeducation />
-            </LayoutCmp>
-          }
-        />
-        <Route
-          path="/skill"
-          element={
-            <LayoutCmp>
-              {" "}
-              <Skill />
             </LayoutCmp>
           }
         />

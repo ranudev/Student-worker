@@ -3,6 +3,7 @@
   display: flex;
   padding: 20px 80px 20px 10px;
   flex-direction: column;
+  margin: 10px;
 }
 h3 p {
   color: rgba(10, 103, 79, 1);
@@ -52,4 +53,8 @@ img {
 .title p {
   color: rgba(0, 0, 0, 0.8);
   font-size: 16px;
+}
+.det {
+  text-decoration: underline;
+  cursor: pointer;
 }

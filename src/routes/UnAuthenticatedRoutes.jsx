@@ -42,6 +42,7 @@ const UnAuthenticatedRoutes = createBrowserRouter(
           </LayoutCmp>
         }
       />
+
       <Route
         path="studsignup"
         element={

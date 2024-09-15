@@ -2,7 +2,7 @@
   display: flex;
 
   justify-content: center;
-
+  padding: 10px 0px 10px 0px;
   align-items: center;
   color: rgb(31, 19, 91);
   font-family: Roboto;
@@ -12,4 +12,16 @@
 div p {
   color: #1f135b;
   margin-right: 64px;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.worker {
+  color: #1f135b;
+  margin-right: 70px;
+  font-size: 15px;
+}
+
+h3 span {
+  font-weight: 400;
 }

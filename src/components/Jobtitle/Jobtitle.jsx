@@ -4,51 +4,49 @@ import Globe from "../../assets/Globe.png";
 import Money from "../../assets/Money.png";
 import Time from "../../assets/Time.png";
 import style from "../../Css/Jobtitle/Jobtitle.module.css";
-import { NavLink } from "react-router-dom";
-//import { NavLink } from "react-router-dom";
-function Jobtitle() {
+import { useNavigate } from "react-router-dom";
+function Jobtitle({ item }) {
+  const navigate = useNavigate();
+  const navigateDetailHandler = () => {
+    navigate("/jobtitleatcompany", { state: item });
+  };
+
   return (
     <React.Fragment>
-      <p className={style.num}>12,000 Jobs</p>
+      {/* <p className={style.num}>12,000 Jobs</p> */}
       <div className={style.mainbox}>
         <div className={style.title}>
-          <h3>Job Title</h3>
-          <p>Company</p>
+          <h3>{item.jobTitle}</h3>
+          <p>{item.companyName}</p>
         </div>
         <div className={style.icon}>
           <div>
             <img src={location} alt="" />
-            <span>Location</span>
+            <span>{item.state}</span>
           </div>
 
           <div>
             <img src={Globe} alt="" />
-            <span>Remote</span>
+            <span>{item.location}</span>
           </div>
           <div>
             <img src={Money} alt="" />
-            <span>N20,000/mo</span>
+            <span>{item.salary}</span>
           </div>
           <div>
             <img src={Time} alt="" />
-            <span>24hrs/Week</span>
+            <span>{item.workingHours}</span>
           </div>
         </div>
         <hr className={style.line} />
         <div className={style.foot}>
           <div className={style.app}>
             <p>10days ago</p>
-            <p>12Applicants</p>
+            <p> {item.applicantCount} Applicants</p>
           </div>
-          <div className={style.det}>
-            {" "}
-            <NavLink
-              to="/jobtitleatcompany
-            "
-            >
-              {" "}
-              View Details
-            </NavLink>
+
+          <div className={style.det} onClick={navigateDetailHandler}>
+            View Details
           </div>
         </div>
       </div>
