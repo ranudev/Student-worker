@@ -5,3 +5,7 @@
   /* background-color: white; */
   font-family: Roboto;
 }
+
+input::placeholder {
+  color: grey;
+}

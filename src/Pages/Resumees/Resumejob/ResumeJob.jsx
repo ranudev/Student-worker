@@ -4,7 +4,7 @@ import pencil from "../../../assets/pencil.png";
 
 //import Header3 from "../../Header/Header3/Header3";
 //import Footer from "../../../components/Footer/Footer";
-function Resumejob() {
+function Resumejob(prop) {
   return (
     <React.Fragment>
       {/* <Header3 /> */}
@@ -25,7 +25,8 @@ function Resumejob() {
       <div className={style.box}>
         <div className={style.name}>
           <h2>
-            Ayo David
+            {prop.firstName}
+            console.log(firstName)
             <span>
               <img src={pencil} />
             </span>{" "}

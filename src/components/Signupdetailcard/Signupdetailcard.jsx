@@ -16,11 +16,16 @@ function Signupdetailcard(prop) {
                 type="text"
                 className={styles.tex1}
                 placeholder={prop.fname}
-                name=""
+                name="firstName"
                 id=""
+                value={prop.personalDetail.firstName}
                 onChange={(event) => {
-                  console.log("here.", event);
-                  prop.setPersonalDetail(event.target.value);
+                  const { name, value } = event.target;
+                  console.log(value);
+                  prop.setPersonalDetail((prev) => ({
+                    ...prev,
+                    [name]: value,
+                  }));
                 }}
               />
             </div>
@@ -30,11 +35,17 @@ function Signupdetailcard(prop) {
                 type="text"
                 className={styles.tex1}
                 placeholder={prop.lname}
-                name=""
+                name="lastName"
                 id=""
+                value={prop.personalDetail.lastName}
                 onChange={(event) => {
-                  console.log("here.", event);
-                  prop.setPersonalDetail(event.target.value);
+                  const { name, value } = event.target;
+                  console.log(value);
+
+                  prop.setPersonalDetail((prev) => ({
+                    ...prev,
+                    [name]: value,
+                  }));
                 }}
               />
             </div>
@@ -43,14 +54,19 @@ function Signupdetailcard(prop) {
             <div className={styles.inputGroupSmall}>
               <label className={styles.tex1}>{prop.text3}</label>
               <input
-                type="number"
+                type="tel"
                 className={styles.tex}
                 placeholder={prop.num}
-                name=""
+                name="mobileNo"
                 id=""
+                value={prop.personalDetail.mobileNo}
                 onChange={(event) => {
-                  console.log("here.", event);
-                  prop.setPersonalDetail(event.target.value);
+                  const { name, value } = event.target;
+                  console.log(value);
+                  prop.setPersonalDetail((prev) => ({
+                    ...prev,
+                    [name]: value,
+                  }));
                 }}
               />
             </div>
@@ -61,9 +77,14 @@ function Signupdetailcard(prop) {
                 placeholder={prop.num1}
                 name=""
                 id=""
+                value={prop.personalDetail}
                 onChange={(event) => {
-                  console.log("here.", event);
-                  prop.setPersonalDetail(event.target.value);
+                  const { name, value } = event.target;
+                  console.log(value);
+                  prop.setPersonalDetail((prev) => ({
+                    ...prev,
+                    [name]: value,
+                  }));
                 }}
               />
             </div>
@@ -74,11 +95,16 @@ function Signupdetailcard(prop) {
               <input
                 type="text"
                 placeholder={prop.state}
-                name=""
+                name="state"
                 id=""
+                value={prop.personalDetail.state}
                 onChange={(event) => {
-                  console.log("here.", event);
-                  prop.setPersonalDetail(event.target.value);
+                  const { name, value } = event.target;
+                  console.log(value);
+                  prop.setPersonalDetail((prev) => ({
+                    ...prev,
+                    [name]: value,
+                  }));
                 }}
               />
             </div>
@@ -88,11 +114,16 @@ function Signupdetailcard(prop) {
                 type="text"
                 className={styles.tex1}
                 placeholder={prop.city}
-                name=""
+                name="city"
                 id=""
+                value={prop.personalDetail.city}
                 onChange={(event) => {
-                  console.log("here.", event);
-                  prop.setPersonalDetail(event.target.value);
+                  const { name, value } = event.target;
+                  console.log(value);
+                  prop.setPersonalDetail((prev) => ({
+                    ...prev,
+                    [name]: value,
+                  }));
                 }}
               />
             </div>

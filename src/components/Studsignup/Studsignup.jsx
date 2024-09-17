@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import { emailPattern } from "../../Utilities/Utils";
 import UserContext from "../../Context/UserContext";
 
-const Studsignup = () => {
+const Studsignup = (prop) => {
   const navigate = useNavigate();
   const [input, setInput] = useState({
     email: "",
@@ -21,34 +21,6 @@ const Studsignup = () => {
   const handleSubmit = (event) => {
     {
       event.preventDefault();
-      // setemailErr("");
-      // setPasswordErr("");
-
-      // if (input.email !== "" && input.password != "") {
-      //   if (!emailPattern.test(input.email)) {
-      //     //test method is used to check pattern of mail[its a built-in method]
-      //     setemailErr("Please enter a valid email");
-
-      //     return;
-      //   }
-      //   if (input.password.length <= 5) {
-      //     setPasswordErr("Please enter minimum 5 character password");
-      //     return;
-      //   }
-
-      //   const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
-
-      //   existingUsers.push(input);
-
-      //   localStorage.setItem("users", JSON.stringify(existingUsers));
-
-      //   setMsg("Form submitted succesfully");
-      //   setLogin(true);
-      //   navigate("/signuppersondetail");
-      // } else {
-      //   if (input.email === "") setemailErr("Email is required");
-      //   if (input.password === "") setPasswordErr("Password is required");
-      // }
 
       /*************************fetch*************************/
 

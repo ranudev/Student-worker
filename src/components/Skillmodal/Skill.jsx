@@ -10,7 +10,7 @@ function Skill(prop) {
         Improve your job search by adding relevant skills
       </p>
       <div className={styles.box}>
-        <div>
+        <div className={styles.innerbox}>
           <div>
             <label className={styles.tex1} htmlFor="">
               Skill1
@@ -21,14 +21,20 @@ function Skill(prop) {
               className={styles.tex1}
               type="text"
               placeholder="Graphic design"
+              name="skill1"
+              value={prop.skillDetail.skill1}
               onChange={(event) => {
-                console.log(event);
-                prop.setSkillDetail(event.target.value);
+                const { name, value } = event.target;
+                console.log(value);
+                prop.setSkillDetail((prev) => ({
+                  ...prev,
+                  [name]: value,
+                }));
               }}
             />
           </div>
         </div>
-        <div>
+        <div className={styles.innerbox}>
           <div>
             <label className={styles.tex1} htmlFor="">
               Skill2
@@ -38,15 +44,21 @@ function Skill(prop) {
             <input
               className={styles.tex1}
               type="text"
+              name="skill2"
               placeholder="Communication skills"
+              value={prop.skillDetail.skill2}
               onChange={(event) => {
-                console.log(event);
-                prop.setSkillDetail(event.target.value);
+                const { name, value } = event.target;
+                console.log(value);
+                prop.setSkillDetail((prev) => ({
+                  ...prev,
+                  [name]: value,
+                }));
               }}
             />
           </div>
         </div>
-        <div>
+        <div className={styles.innerbox}>
           <div>
             <label className={styles.tex1} htmlFor="">
               Skill3
@@ -56,10 +68,16 @@ function Skill(prop) {
             <input
               className={styles.tex1}
               type="text"
+              name="skill3"
               placeholder="Team work"
+              value={prop.skillDetail.skill3}
               onChange={(event) => {
-                console.log(event);
-                prop.setSkillDetail(event.target.value);
+                const { name, value } = event.target;
+                console.log(value);
+                prop.setSkillDetail((prev) => ({
+                  ...prev,
+                  [name]: value,
+                }));
               }}
             />
           </div>

@@ -1,11 +1,16 @@
 import React from "react";
 import style from "../../../Css/Resumejob/Resumejob.module.css";
 import pencil from "../../../assets/pencil.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 //import Header3 from "../../Header/Header3/Header3";
 //import Footer from "../../../components/Footer/Footer";
 
-const ResumeCmp = () => {
+const ResumeCmp = (props) => {
+  const navigate = useNavigate();
+  const navigateOnJobHandler = () => {
+    navigate("/job");
+  };
+  const { personalDetail, educationDetail, skillDetail } = props;
   return (
     <React.Fragment>
       <div className={style.resume}>
@@ -15,14 +20,20 @@ const ResumeCmp = () => {
       <div className={style.box}>
         <div className={style.name}>
           <h2>
-            Ayo David
+            {personalDetail.firstName}
+            {personalDetail.lastName}
             <span>
               <img className={style.pen} src={pencil} />
             </span>{" "}
           </h2>
-          <p>ayoda123@gmail.com</p>
+          {/* <p>ayoda123@gmail.com</p>
           <p>098543457</p>
-          <p>Appa , Lagos</p>
+          <p>Appa , Lagos</p> */}
+
+          {personalDetail.mobileNo}
+          <pre>
+            {personalDetail.state},{personalDetail.city}
+          </pre>
         </div>
         <hr className={style.line} />
 
@@ -31,11 +42,14 @@ const ResumeCmp = () => {
             <h5> Education</h5>
           </div>
           <div>
-            <p>
-              Mechanical Engineer <br />
-              <span>university of Lagos</span> <br />
-              <span>2020-2021</span>
-            </p>
+            <pre>
+              {educationDetail.university}
+              {educationDetail.course}
+
+              {educationDetail.startyear}
+
+              {educationDetail.endyear}
+            </pre>
           </div>
           <div>
             <p className={style.pencil}>
@@ -49,11 +63,10 @@ const ResumeCmp = () => {
             <h5> Skills</h5>
           </div>
           <div>
-            <p>
-              Graphic design <br />
-              Communication skills <br />
-              Teamwork
-            </p>
+            {skillDetail.skill1}
+            {skillDetail.skill2}
+
+            {skillDetail.skill3}
           </div>
           <div>
             <p className={style.pencil}>
@@ -63,8 +76,8 @@ const ResumeCmp = () => {
         </div>
       </div>
       <div className={style.complete}>
-        <button className={style.cmp}>
-          <NavLink to="/job">Complete</NavLink>
+        <button className={style.cmp} onClick={navigateOnJobHandler}>
+          Complete
         </button>
       </div>
       {/* <Footer /> */}

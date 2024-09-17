@@ -24,22 +24,7 @@ function Login() {
   const handleSubmit = (e) => {
     {
       e.preventDefault();
-      // const loggeduser = JSON.parse(localStorage.getItem("user"));
-      // if (
-      //   input.email === loggeduser.email &&
-      //   input.password === loggeduser.password
-      // ) {
-      //   setLogin(true);
-      //   navigate("/");
-      // }
-      // if (
-      //   input.email !== loggeduser.email &&
-      //   input.password !== loggeduser.password
-      // ) {
-      //   setLogin(false);
-      // } else {
-      //   setErr("your credentials are not matched");
-      // }
+
       /********************fetch method ****************************/
 
       fetch(" http://localhost:3000/api/auth/login", {

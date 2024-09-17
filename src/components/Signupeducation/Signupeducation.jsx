@@ -17,11 +17,16 @@ const Signupeducation = (prop) => {
                 className={styles.tex1}
                 type="text"
                 placeholder="University of Lagos"
-                name=""
+                name="university"
                 id=""
+                value={prop.educationDetail.university}
                 onChange={(event) => {
-                  console.log("education..", event);
-                  prop.setEducationDetail(event.target.value);
+                  const { name, value } = event.target;
+                  console.log(value);
+                  prop.setEducationDetail((prev) => ({
+                    ...prev,
+                    [name]: value,
+                  }));
                 }}
               />
             </div>
@@ -31,11 +36,16 @@ const Signupeducation = (prop) => {
                 className={styles.tex1}
                 type="text"
                 placeholder=" Mec eng"
-                name=""
+                name="course"
                 id=""
+                value={prop.educationDetail.course}
                 onChange={(event) => {
-                  console.log("education..", event);
-                  prop.setEducationDetail(event.target.value);
+                  const { name, value } = event.target;
+                  console.log(value);
+                  prop.setEducationDetail((prev) => ({
+                    ...prev,
+                    [name]: value,
+                  }));
                 }}
               />
             </div>
@@ -48,11 +58,16 @@ const Signupeducation = (prop) => {
                 className={styles.tex1}
                 type="month"
                 placeholder="2019"
-                name=""
+                name="startyear"
                 id=""
+                value={prop.educationDetail.startyear}
                 onChange={(event) => {
-                  console.log("education..", event);
-                  prop.setEducationDetail(event.target.value);
+                  const { name, value } = event.target;
+                  console.log(value);
+                  prop.setEducationDetail((prev) => ({
+                    ...prev,
+                    [name]: value,
+                  }));
                 }}
               />
             </div>
@@ -62,11 +77,16 @@ const Signupeducation = (prop) => {
                 className={styles.tex1}
                 type="month"
                 placeholder="2022"
-                name=""
+                name="endyear"
                 id=""
+                value={prop.educationDetail.endyear}
                 onChange={(event) => {
-                  console.log("education..", event);
-                  prop.setEducationDetail(event.target.value);
+                  const { name, value } = event.target;
+                  console.log(value);
+                  prop.setEducationDetail((prev) => ({
+                    ...prev,
+                    [name]: value,
+                  }));
                 }}
               />
             </div>
