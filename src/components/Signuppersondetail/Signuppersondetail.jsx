@@ -7,6 +7,7 @@ import styles from "../../Css/signuppersondetail/Signuppersondetail.module.css";
 
 const Signuppersondetail = () => {
   const [currentStep, setCurrentStep] = useState(0);
+  const [disableBtn, setDisableBtn] = useState(true);
   const [personalDetail, setPersonalDetail] = useState({
     firstName: "",
     lastName: "",
@@ -31,15 +32,28 @@ const Signuppersondetail = () => {
   const steps = [
     <Signupdetailcard
       key="signupdetailcard"
-      text="Personal Details"
+      header="Personal Details"
+      fname="Ayo"
+      tex1="First Name"
+      lname="David"
+      text2="Last Name"
+      num="+123"
+      text3="Mobile number"
+      num1="0081034"
+      text4="Current state"
+      state="Lagos"
+      text5="city"
+      city="Apapa"
       setPersonalDetail={setPersonalDetail}
       personalDetail={personalDetail}
+      setDisableBtn={setDisableBtn}
     />,
     <Signupeducation
       key="signupeducation"
       setEducationDetail={setEducationDetail}
       educationDetail={educationDetail}
     />,
+
     <Skill
       key="skill"
       setSkillDetail={setSkillDetail}
@@ -128,9 +142,24 @@ const Signuppersondetail = () => {
               )}
             </div>
 
+            {/* <div>
+              {currentStep < steps.length - 1 && (
+                <button
+                  onClick={handleNext}
+                  className={styles.next}
+                  disabled={disableBtn}
+                >
+                  Next
+                </button>
+              )}
+            </div> */}
             <div>
               {currentStep < steps.length - 1 && (
-                <button onClick={handleNext} className={styles.next}>
+                <button
+                  onClick={handleNext}
+                  className={styles.next}
+                  disabled={disableBtn} // Button is disabled based on validation
+                >
                   Next
                 </button>
               )}

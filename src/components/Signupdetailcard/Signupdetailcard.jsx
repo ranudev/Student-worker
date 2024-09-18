@@ -1,32 +1,47 @@
-import React from "react";
+import { useEffect } from "react";
 //import Education from "../Education/Education";
 // import "../../Css/Persondet/Persondetail.css";
 import styles from "../../Css/Signupdetail/Signupdetail.module.css";
 
-function Signupdetailcard(prop) {
+const Signupdetailcard = ({
+  personalDetail,
+  setPersonalDetail,
+  setDisableBtn,
+  prop,
+}) => {
+  const validateForm = () => {
+    const { firstName, lastName, mobileNo, city, state } = personalDetail;
+    // Simple validation: check if all fields are filled
+    return firstName && lastName && mobileNo && city && state;
+  };
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    console.log(value);
+    setPersonalDetail((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  useEffect(() => {
+    setDisableBtn(!validateForm());
+  }, [personalDetail, setDisableBtn]);
   return (
-    <React.Fragment>
-      <h1 className={styles.header}>{prop.text}</h1>
+    <>
+      <h1 className={styles.header}>{prop.header}</h1>
       <div className={styles.outerbox}>
         <form>
           <div className={styles.formGroup}>
             <div className={styles.inputGroup}>
-              <label className={styles.tex1}>{prop.text}</label>
+              <label className={styles.tex1}>{prop.tex1}</label>
               <input
                 type="text"
                 className={styles.tex1}
                 placeholder={prop.fname}
                 name="firstName"
                 id=""
-                value={prop.personalDetail.firstName}
-                onChange={(event) => {
-                  const { name, value } = event.target;
-                  console.log(value);
-                  prop.setPersonalDetail((prev) => ({
-                    ...prev,
-                    [name]: value,
-                  }));
-                }}
+                value={personalDetail.firstName}
+                onChange={handleChange}
               />
             </div>
             <div className={styles.inputGroup}>
@@ -37,16 +52,8 @@ function Signupdetailcard(prop) {
                 placeholder={prop.lname}
                 name="lastName"
                 id=""
-                value={prop.personalDetail.lastName}
-                onChange={(event) => {
-                  const { name, value } = event.target;
-                  console.log(value);
-
-                  prop.setPersonalDetail((prev) => ({
-                    ...prev,
-                    [name]: value,
-                  }));
-                }}
+                value={personalDetail.lastName}
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -59,33 +66,19 @@ function Signupdetailcard(prop) {
                 placeholder={prop.num}
                 name="mobileNo"
                 id=""
-                value={prop.personalDetail.mobileNo}
-                onChange={(event) => {
-                  const { name, value } = event.target;
-                  console.log(value);
-                  prop.setPersonalDetail((prev) => ({
-                    ...prev,
-                    [name]: value,
-                  }));
-                }}
+                value={personalDetail.mobileNo}
+                onChange={handleChange}
               />
             </div>
             <div className={styles.inputGroupLarge}>
               <input
                 className={styles.tex2}
-                type="text"
+                type="tel"
                 placeholder={prop.num1}
-                name=""
+                name="mobileNo"
                 id=""
-                value={prop.personalDetail}
-                onChange={(event) => {
-                  const { name, value } = event.target;
-                  console.log(value);
-                  prop.setPersonalDetail((prev) => ({
-                    ...prev,
-                    [name]: value,
-                  }));
-                }}
+                value={personalDetail.num1}
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -97,15 +90,8 @@ function Signupdetailcard(prop) {
                 placeholder={prop.state}
                 name="state"
                 id=""
-                value={prop.personalDetail.state}
-                onChange={(event) => {
-                  const { name, value } = event.target;
-                  console.log(value);
-                  prop.setPersonalDetail((prev) => ({
-                    ...prev,
-                    [name]: value,
-                  }));
-                }}
+                value={personalDetail.state}
+                onChange={handleChange}
               />
             </div>
             <div className={styles.inputGroup}>
@@ -116,22 +102,17 @@ function Signupdetailcard(prop) {
                 placeholder={prop.city}
                 name="city"
                 id=""
-                value={prop.personalDetail.city}
-                onChange={(event) => {
-                  const { name, value } = event.target;
-                  console.log(value);
-                  prop.setPersonalDetail((prev) => ({
-                    ...prev,
-                    [name]: value,
-                  }));
-                }}
+                value={personalDetail.city}
+                onChange={handleChange}
               />
+            </div>
+            <div className={styles.buttonContainer}>
+              <button disabled={setDisableBtn}>Next</button>
             </div>
           </div>
         </form>
       </div>
-    </React.Fragment>
+    </>
   );
-}
-
+};
 export default Signupdetailcard;

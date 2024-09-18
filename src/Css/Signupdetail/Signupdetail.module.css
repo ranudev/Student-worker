@@ -47,7 +47,7 @@ input {
   margin-top: 50px;
 }
 
-.nextbtn {
+/* .nextbtn {
   padding: 10px;
   width: 180px;
   background-color: rgb(10, 103, 79);
@@ -56,7 +56,7 @@ input {
   text-align: center;
   border-radius: 3px;
   border: none;
-}
+} */
 
 .tex1 {
   font-size: 18px;
@@ -85,4 +85,23 @@ input {
   border: rgb(10, 103, 79);
   font-size: 18px;
   font-weight: 400;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center; /* Horizontally center the button */
+  margin-top: 20px; /* Adjust as needed */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #0a674f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
 }
