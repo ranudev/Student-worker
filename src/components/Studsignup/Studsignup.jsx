@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import { emailPattern } from "../../Utilities/Utils";
 import UserContext from "../../Context/UserContext";
 
-const Studsignup = (prop) => {
+const Studsignup = () => {
   const navigate = useNavigate();
   const [input, setInput] = useState({
     email: "",

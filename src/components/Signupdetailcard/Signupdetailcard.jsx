@@ -7,7 +7,18 @@ const Signupdetailcard = ({
   personalDetail,
   setPersonalDetail,
   setDisableBtn,
-  prop,
+  header,
+  tex1,
+  fname,
+  text2,
+  lname,
+  text3,
+  num,
+  num1,
+  text4,
+  state,
+  text5,
+  city,
 }) => {
   const validateForm = () => {
     const { firstName, lastName, mobileNo, city, state } = personalDetail;
@@ -24,20 +35,22 @@ const Signupdetailcard = ({
   };
 
   useEffect(() => {
-    setDisableBtn(!validateForm());
+    if (typeof setDisableBtn === "function") {
+      setDisableBtn(!validateForm());
+    }
   }, [personalDetail, setDisableBtn]);
   return (
     <>
-      <h1 className={styles.header}>{prop.header}</h1>
+      <h1 className={styles.header}>{header}</h1>
       <div className={styles.outerbox}>
         <form>
           <div className={styles.formGroup}>
             <div className={styles.inputGroup}>
-              <label className={styles.tex1}>{prop.tex1}</label>
+              <label className={styles.tex1}>{tex1}</label>
               <input
                 type="text"
                 className={styles.tex1}
-                placeholder={prop.fname}
+                placeholder={fname}
                 name="firstName"
                 id=""
                 value={personalDetail.firstName}
@@ -45,11 +58,11 @@ const Signupdetailcard = ({
               />
             </div>
             <div className={styles.inputGroup}>
-              <label className={styles.tex1}>{prop.text2}</label>
+              <label className={styles.tex1}>{text2}</label>
               <input
                 type="text"
                 className={styles.tex1}
-                placeholder={prop.lname}
+                placeholder={lname}
                 name="lastName"
                 id=""
                 value={personalDetail.lastName}
@@ -59,11 +72,11 @@ const Signupdetailcard = ({
           </div>
           <div className={styles.formGroup}>
             <div className={styles.inputGroupSmall}>
-              <label className={styles.tex1}>{prop.text3}</label>
+              <label className={styles.tex1}>{text3}</label>
               <input
                 type="tel"
                 className={styles.tex}
-                placeholder={prop.num}
+                placeholder={num}
                 name="mobileNo"
                 id=""
                 value={personalDetail.mobileNo}
@@ -74,7 +87,7 @@ const Signupdetailcard = ({
               <input
                 className={styles.tex2}
                 type="tel"
-                placeholder={prop.num1}
+                placeholder={num1}
                 name="mobileNo"
                 id=""
                 value={personalDetail.num1}
@@ -84,10 +97,10 @@ const Signupdetailcard = ({
           </div>
           <div className={styles.formGroup}>
             <div className={styles.inputGroup}>
-              <label className={styles.tex1}>{prop.text4}</label>
+              <label className={styles.tex1}>{text4}</label>
               <input
                 type="text"
-                placeholder={prop.state}
+                placeholder={state}
                 name="state"
                 id=""
                 value={personalDetail.state}
@@ -95,20 +108,20 @@ const Signupdetailcard = ({
               />
             </div>
             <div className={styles.inputGroup}>
-              <label className={styles.tex1}>{prop.text5}</label>
+              <label className={styles.tex1}>{text5}</label>
               <input
                 type="text"
                 className={styles.tex1}
-                placeholder={prop.city}
+                placeholder={city}
                 name="city"
                 id=""
                 value={personalDetail.city}
                 onChange={handleChange}
               />
             </div>
-            <div className={styles.buttonContainer}>
+            {/* <div className={styles.buttonContainer}>
               <button disabled={setDisableBtn}>Next</button>
-            </div>
+            </div> */}
           </div>
         </form>
       </div>

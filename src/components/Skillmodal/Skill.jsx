@@ -1,7 +1,26 @@
 import React from "react";
 import styles from "../../Css/Skill/Skill.module.css";
+import { useEffect } from "react";
 
-function Skill(prop) {
+const Skill = ({ skillDetail, setSkillDetail, setDisablebtn }) => {
+  const validateForm = () => {
+    const { skill1, skill2, skill3 } = skillDetail;
+    return skill1 && skill2 && skill3;
+  };
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    console.log(value);
+    setSkillDetail((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  useEffect(() => {
+    if (typeof setDisablebtn === "function") {
+      setDisablebtn(!validateForm());
+    }
+  }, [skillDetail, setDisablebtn]);
   return (
     <React.Fragment>
       <h2 className={styles.skills}>Skills</h2>
@@ -22,15 +41,8 @@ function Skill(prop) {
               type="text"
               placeholder="Graphic design"
               name="skill1"
-              value={prop.skillDetail.skill1}
-              onChange={(event) => {
-                const { name, value } = event.target;
-                console.log(value);
-                prop.setSkillDetail((prev) => ({
-                  ...prev,
-                  [name]: value,
-                }));
-              }}
+              value={skillDetail.skill1}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -46,15 +58,8 @@ function Skill(prop) {
               type="text"
               name="skill2"
               placeholder="Communication skills"
-              value={prop.skillDetail.skill2}
-              onChange={(event) => {
-                const { name, value } = event.target;
-                console.log(value);
-                prop.setSkillDetail((prev) => ({
-                  ...prev,
-                  [name]: value,
-                }));
-              }}
+              value={skillDetail.skill2}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -70,21 +75,14 @@ function Skill(prop) {
               type="text"
               name="skill3"
               placeholder="Team work"
-              value={prop.skillDetail.skill3}
-              onChange={(event) => {
-                const { name, value } = event.target;
-                console.log(value);
-                prop.setSkillDetail((prev) => ({
-                  ...prev,
-                  [name]: value,
-                }));
-              }}
+              value={skillDetail.skill3}
+              onChange={handleChange}
             />
           </div>
         </div>
       </div>
     </React.Fragment>
   );
-}
+};
 
 export default Skill;

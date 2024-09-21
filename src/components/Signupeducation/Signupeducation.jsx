@@ -1,10 +1,60 @@
-//import React from 'react'
-
-import React from "react";
-
+import React, { useEffect, useState } from "react";
 import styles from "../../Css/Signupdetail/Signupdetail.module.css";
 
-const Signupeducation = (prop) => {
+const Signupeducation = ({
+  educationDetail,
+  setEducationDetail,
+  setDisableBtn,
+}) => {
+  const [errors, setErrors] = useState({
+    startyear: "",
+    endyear: "",
+  });
+
+  const validateYears = () => {
+    const { startyear, endyear } = educationDetail;
+    let isValid = true;
+    const newErrors = { startyear: "", endyear: "" };
+
+    if (!startyear) {
+      newErrors.startyear = "Start year is required";
+      isValid = false;
+    }
+
+    if (!endyear) {
+      newErrors.endyear = "End year is required";
+      isValid = false;
+    }
+
+    if (startyear && endyear && startyear > endyear) {
+      newErrors.endyear =
+        "End year must be later than or equal to the start year";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
+  const validateForm = () => {
+    const { university, course } = educationDetail;
+    return university && course && validateYears();
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setEducationDetail((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  useEffect(() => {
+    if (typeof setDisableBtn === "function") {
+      setDisableBtn(!validateForm());
+    }
+  }, [educationDetail, setDisableBtn]);
+
   return (
     <React.Fragment>
       <h1 className={styles.header}>Education</h1>
@@ -18,16 +68,8 @@ const Signupeducation = (prop) => {
                 type="text"
                 placeholder="University of Lagos"
                 name="university"
-                id=""
-                value={prop.educationDetail.university}
-                onChange={(event) => {
-                  const { name, value } = event.target;
-                  console.log(value);
-                  prop.setEducationDetail((prev) => ({
-                    ...prev,
-                    [name]: value,
-                  }));
-                }}
+                value={educationDetail.university}
+                onChange={handleChange}
               />
             </div>
             <div className={styles.inputGroup}>
@@ -35,18 +77,10 @@ const Signupeducation = (prop) => {
               <input
                 className={styles.tex1}
                 type="text"
-                placeholder=" Mec eng"
+                placeholder="Mechanical Engineering"
                 name="course"
-                id=""
-                value={prop.educationDetail.course}
-                onChange={(event) => {
-                  const { name, value } = event.target;
-                  console.log(value);
-                  prop.setEducationDetail((prev) => ({
-                    ...prev,
-                    [name]: value,
-                  }));
-                }}
+                value={educationDetail.course}
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -57,38 +91,30 @@ const Signupeducation = (prop) => {
               <input
                 className={styles.tex1}
                 type="month"
-                placeholder="2019"
                 name="startyear"
-                id=""
-                value={prop.educationDetail.startyear}
-                onChange={(event) => {
-                  const { name, value } = event.target;
-                  console.log(value);
-                  prop.setEducationDetail((prev) => ({
-                    ...prev,
-                    [name]: value,
-                  }));
-                }}
+                value={educationDetail.startyear}
+                onChange={handleChange}
               />
+              {errors.startyear && (
+                <span style={{ color: "red", marginTop: "10px" }}>
+                  {errors.startyear}
+                </span>
+              )}
             </div>
             <div className={styles.inputGroup}>
               <label className={styles.tex1}>End Year</label>
               <input
                 className={styles.tex1}
                 type="month"
-                placeholder="2022"
                 name="endyear"
-                id=""
-                value={prop.educationDetail.endyear}
-                onChange={(event) => {
-                  const { name, value } = event.target;
-                  console.log(value);
-                  prop.setEducationDetail((prev) => ({
-                    ...prev,
-                    [name]: value,
-                  }));
-                }}
+                value={educationDetail.endyear}
+                onChange={handleChange}
               />
+              {errors.endyear && (
+                <span style={{ color: "red", marginTop: "10px" }}>
+                  {errors.endyear}
+                </span>
+              )}
             </div>
           </div>
         </form>

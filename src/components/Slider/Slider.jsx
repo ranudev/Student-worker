@@ -19,9 +19,9 @@ function Slider(prop) {
             <br></br>
             {prop.text3}
           </p>
-          <div className={styles.btn}>
+          <div className={styles.but}>
             <button
-              className={styles.student}
+              className={styles.buton}
               onClick={() => {
                 goto();
               }}

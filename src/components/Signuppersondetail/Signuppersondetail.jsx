@@ -52,12 +52,14 @@ const Signuppersondetail = () => {
       key="signupeducation"
       setEducationDetail={setEducationDetail}
       educationDetail={educationDetail}
+      setDisableBtn={setDisableBtn}
     />,
 
     <Skill
       key="skill"
       setSkillDetail={setSkillDetail}
       skillDetail={skillDetail}
+      setDisablebtn={setDisableBtn}
     />,
     <ResumeCmp
       key="resumecmp"
@@ -142,17 +144,6 @@ const Signuppersondetail = () => {
               )}
             </div>
 
-            {/* <div>
-              {currentStep < steps.length - 1 && (
-                <button
-                  onClick={handleNext}
-                  className={styles.next}
-                  disabled={disableBtn}
-                >
-                  Next
-                </button>
-              )}
-            </div> */}
             <div>
               {currentStep < steps.length - 1 && (
                 <button
